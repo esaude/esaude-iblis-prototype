@@ -1,0 +1,66 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+	        <div>
+				<button class="btn btn-info btn-info-md"
+				ng-click="vm.goBack() ">
+					<i class="fa fa-hand-o-left"> </i> Voltar
+				</button>
+				<button class="btn btn-info btn-form-md" ng-click="vm.cancel()"
+					ng-disabled="vm.isUnchanged()">
+						<i class="fa fa-undo"></i> Cancelar
+				</button>
+				<button class="btn btn-info-form-md" ng-click="vm.save()"
+					ng-disabled="form.$invalid || vm.isUnchanged()">
+						<i class="fa fa-save"> Guardar </i>
+				</button>
+
+				<!--Need ng-hide for show/hide animations  -->
+				<span ng-hide="vm.isUnchanged()" class="dissolve-animation ng-hide flag-haschanges" >
+					<i class="fa fa-asterisk fa fa-asterisk-large"
+						rel="tooltip" title="You have changes" >  </i>
+				</span>
+			</div>
+
+			<div class="widget wblue">
+				<div title="Edite {{vm.getFullName() || 'New Patient' }}"> </div>
+				<div class="widget-content user">
+					<div class="form-group">
+						<label for="" class="control-label"> NID </label>
+						<label for="" class="control-label"> {{ vm.patient.nid }} </label>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label"> Nome  </label>
+						<div>
+							<input class="form-control" ng-model="vm.patient.firstName" placeholder="First Name" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label"> Apelido </label>
+						<div>
+							<input class="form-control" ng-model="vm.patient.lastName" placeholder="Apelido">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label"> Endereco </label>
+						<div>
+							<input class="form-control" ng-model="vm.patient.address" placeholder="Endereco">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-body">
+
+				</div>
+				<div class="panel-footer">
+
+				</div>
+
+			</div>
+
+        </div>
+    </section>
+</section>

@@ -1,0 +1,42 @@
+<section id="dashboard-view" class="mainbar">
+  <section class="matter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="today-datas">
+            <li class="blightblue">
+              <div class="pull-left"><i class="fa fa-eyedropper fa-2x"></i></div>
+              <div class="datas-text pull-right">
+                <span class="bold">Testes - 19 </span>
+              </div>
+              <div class="clearfix"></div>
+            </li>
+
+            <li class="borange">
+              <div class="pull-left"><i class="fa fa-envelope"></i></div>
+              <div class="datas-text pull-right">
+                <span class="bold">{{vm.messageCount}}</span> Resultados
+              </div>
+              <div class="clearfix"></div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="widget wgreen">
+            <div ht-widget-header title="{{vm.news.title}}" allow-collapse="true"></div>
+            <div class="widget-content text-center text-info">
+              <small>{{vm.news.description}}</small>
+            </div>
+            <div class="widget-foot">
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

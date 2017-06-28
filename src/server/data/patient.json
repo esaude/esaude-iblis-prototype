@@ -1,0 +1,65 @@
+[
+    {
+        "nid": "1234541212345",
+        "firstName": "Joao",
+        "lastName": "Papa",
+        "age": 35,
+        "location": "Maputo"
+    },
+    {
+        "nid": "2234541212345",
+        "firstName": "Ana",
+        "lastName": "Doe",
+        "age": 31,
+        "location": "Xai-xai"
+    },
+    {
+        "nid": "3234541212345",
+        "firstName": "Son",
+        "lastName": "Doe",
+        "age": 21,
+        "location": "Chokwe"
+    },
+    {
+        "nid": "4234541212345",
+        "firstName": "Daughet",
+        "lastName": "Doe",
+        "age": 18,
+        "location": "Nacala"
+    },
+    {
+        "nid": "5234541212345",
+        "firstName": "Uncle",
+        "lastName": "Doe",
+        "age": 28,
+        "location": "Beira"
+    },
+    {
+        "nid": "6234541212345",
+        "firstName": "Antie",
+        "lastName": "Doe",
+        "age": 31,
+        "location": "Quelimane"
+    },
+    {
+        "nid": "7234541212345",
+        "firstName": "Grandfater",
+        "lastName": "Doe",
+        "age": 58,
+        "location": "Boane"
+    },
+    {
+        "nid": "8234541212345",
+        "firstName": "Grandmother",
+        "lastName": "Doe",
+        "age": 52,
+        "location": "Namaacha"
+    },
+    {
+        "nid": "123456782154321",
+        "firstName": "Lars",
+        "lastName": "Lemos",
+        "age": "27",
+        "location": "Quelimane"
+    }
+]
