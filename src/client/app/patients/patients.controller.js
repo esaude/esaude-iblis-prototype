@@ -46,7 +46,6 @@
 			function gotoPatient(nid) {
 				console.warn("gotoPatient...");
 				$state.go('patient',{nid: nid});
-				logger.info('Went to person: '+nid);
 			}
 
 			function edit(patient) {
