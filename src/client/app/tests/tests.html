@@ -2,24 +2,24 @@
 	<section class="matter">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6"> 
-					
+				<div class="col-md-6">
+
 					<div class="form-group">
 						<form action="" class="search">
 							<input type="text" class="form-control test-search" >
 
 							<button class="btn btn-primary">
-									<i class="fa fa-search-plus"></i> Buscar 
+									<i class="fa fa-search-plus"></i> Buscar
 							</button>
 						</form>
 					</div>
-				
+
 				</div>
 
 				<div class="col-md-12">
 					<div class="panel panel-success">
 						<div class="panel panel-heading"> <i class="fa fa-hospital-o fa-2x "></i>
-							Lista de Testes 
+							Lista de Testes
 						</div>
 						<div class="panel panel-body">
 							<table class="table table-stripped table-hover table-condensend">
@@ -34,7 +34,7 @@
 										<th collspan="4">Testes </th>
 									</tr>
 								</thead>
-								<tbody> 
+								<tbody>
 											<tr ng-repeat="test in vm.tests">
 												<td> {{ test.date }} </td>
 												<td> {{ test.requisition }} </td>
@@ -44,16 +44,16 @@
 												<td> {{ test.visit }} </td>
 												<!-- <td collspan="4" ng-repeat="ordertype in test"> {{ order }} </td> -->
 												<td ng-repeat="type in test.testsorders">
-												 <button class="btn" uib-popover="Test Info" popover-title="Detalhes" popover-placement="bottom"> {{ type }} </button >
+												 <button class="btn btn-{{type.btn}}" uib-popover="Test Info" popover-title="Detalhes" popover-placement="bottom"> {{ type.display }} </button >
 												  </td>
 											</tr>
-											
 
 
-								</tbody>		
+
+								</tbody>
 							</table>
 						</div>
-					</div>		
+					</div>
 				</div>
 			</div>
 		</div>
