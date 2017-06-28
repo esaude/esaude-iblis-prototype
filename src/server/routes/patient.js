@@ -52,9 +52,7 @@ function getPatient(id) {
 
 function addPatient(newPatient) {
       var patients = helper.readData(patientData);
-
       patients.push(newPatient);
-      console.log("##addPatientData()");
       helper.savePatientData(patientData, patients);
-      
+
 }

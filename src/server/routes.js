@@ -27,6 +27,7 @@ function getPeople(req, res, next) {
 }
 
 function getPatients(req, res, next) {
+
   res.status(200).send(patientData.getPatients());
 }
 
@@ -65,6 +66,6 @@ function getPerson(req, res, next) {
       lastName: req.body.lastName,
       age: req.body.age,
       location: req.body.location
-    }; 
+    };
     res.status(200).send(patientData.addPatient(newPatient));
  }

@@ -25,6 +25,7 @@
 			<div class="widget wblue">
 				<div title="Editar {{vm.getFullName() || 'Novo Paciente' }}"> </div>
 				<div class="widget-content user">
+          <pre> {{ vm.patient | json }}</pre>
 					<div class="form-group">
 						<label for="" class="control-label"> NID </label>
             <div>
@@ -43,10 +44,16 @@
 							<input class="form-control" ng-model="vm.patient.lastName" placeholder="Apelido">
 						</div>
 					</div>
+          <div class="form-group">
+						<label for="" class="control-label"> Endereco </label>
+						<div>
+							<input type="number" class="form-control" ng-model="vm.patient.age" placeholder="Idade">
+						</div>
+					</div>
 					<div class="form-group">
 						<label for="" class="control-label"> Endereco </label>
 						<div>
-							<input class="form-control" ng-model="vm.patient.address" placeholder="Endereco">
+							<input class="form-control" ng-model="vm.patient.location" placeholder="Endereco">
 						</div>
 					</div>
 				</div>

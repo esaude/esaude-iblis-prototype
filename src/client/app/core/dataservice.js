@@ -19,8 +19,7 @@
       getPatient : getPatient,
       addPatient: addPatient,
       savePatient: savePatient,
-      deletePatient: deletePatient,
-
+      deletePatient: deletePatient
     };
 
     return service;
@@ -50,7 +49,8 @@
        return $http.get('/api/patient/'+id).then(success).catch(fail);
 
        function success(response) {
-          return response.data;
+
+          return response.data[0];
         }
 
         function fail(e) {
@@ -86,7 +86,7 @@
     }
 
     function savePatient() {
-      
+
     }
     function deletePatient() {
 
