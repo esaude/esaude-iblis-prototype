@@ -32,7 +32,45 @@
               <small>{{vm.news.description}}</small>
             </div>
             <div class="widget-foot">
-              <div class="clearfix"></div>
+
+              <div class="row">
+                <div class="col-md-12 page-header">
+                  <h1>Mensal</h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 col-md-offset-1">
+                  <h2>Specimen Status</h2>
+                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data1" chart-labels="vm.labels1"
+                  chart-options="vm.options"></canvas>
+                </div>
+                <div class="col-md-4 col-md-offset-1">
+                  <h2>Test Status</h2>
+                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data2" chart-labels="vm.labels2"
+                  chart-options="vm.options"></canvas>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 page-header">
+                  <h1>Semanal</h1>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 col-md-offset-1">
+                  <h2>Specimen Status</h2>
+                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data3" chart-labels="vm.labels3"
+                  chart-options="vm.options"></canvas>
+                </div>
+                <div class="col-md-4 col-md-offset-1">
+                  <h2>Test Status</h2>
+                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data4" chart-labels="vm.labels4"
+                  chart-options="vm.options"></canvas>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
