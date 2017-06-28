@@ -33,7 +33,7 @@
 			// 	config: {
 			// 		url: '/patient',
 			// 		templateUrl: 'app/patients/patient.html',
-			// 		controller: 'PatientController', 
+			// 		controller: 'PatientController',
 			// 		controllerAs: 'vm',
 			// 		title: 'paticiente',
 			// 		settings: {
@@ -51,7 +51,7 @@
 					controllerAs: 'vm',
 					title: 'detalhes paciente',
 					settings: {
-						nav: 3,
+						
 						content: '<i class="fa fa-user fa-lg"></i> Paciente '
 					}
 				}

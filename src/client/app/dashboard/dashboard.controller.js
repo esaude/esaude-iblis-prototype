@@ -10,8 +10,8 @@
   function DashboardController($q, dataservice, logger) {
     var vm = this;
     vm.news = {
-      title: 'iBlis',
-      description: 'Aplicacao para gerir dados Laboratorias'
+      title: 'eSaude iBlis',
+      description: ' '
     };
     vm.messageCount = 0;
     vm.people = [];
