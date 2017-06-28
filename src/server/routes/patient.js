@@ -56,4 +56,5 @@ function addPatient(newPatient) {
       patients.push(newPatient);
       console.log("##addPatientData()");
       helper.savePatientData(patientData, patients);
+      
 }

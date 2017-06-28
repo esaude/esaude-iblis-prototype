@@ -9,12 +9,12 @@
   /* @ngInject */
   function AdminController(logger) {
     var vm = this;
-    vm.title = 'Admin';
+    vm.title = 'Administrador';
 
     activate();
 
     function activate() {
-      logger.info('Activated Admin View');
+      logger.info('Activated Administrator View');
 
       vm.options = {legend: {display: true}};
 

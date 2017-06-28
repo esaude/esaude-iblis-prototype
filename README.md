@@ -82,8 +82,8 @@ app --> [
         app.widgets,
 		app.core --> [
 			ngAnimate,
-			ngSanitize,
 			ui.router,
+      ngSanitize,
 			blocks.exception,
 			blocks.logger,
 			blocks.router

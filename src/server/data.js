@@ -57,13 +57,13 @@ function getPatients() {
 
 function getTests() {
   return [
-    {date: '1/05/2017', requisition: 2 , nid: '823454/12/12345', age: 25, gender: 'F', visit: 'Ambulatorio ',
+    {date: '1/05/2017', requisition: 2 , nid: '8234541212345', age: 25, gender: 'F', visit: 'Ambulatorio ',
     testsorders: [{display: 'Urineanalysis', btn: 'primary'}, {display: 'Pregnacy', btn: 'success'}, {display: 'HB', btn: 'info'}, {display: 'BS', btn: 'danger'}] },
-    {date: '1/05/2017', requisition: 2 , nid: '156842/68/98518', age: 27, gender: 'F', visit: 'Ambulatorio ',
+    {date: '1/05/2017', requisition: 2 , nid: '1568426898518', age: 27, gender: 'F', visit: 'Ambulatorio ',
     testsorders: [{display: 'Urineanalysis', btn: 'danger'}, {display: 'Pregnacy', btn: 'success'}, {display: 'HB', btn: 'primary'}, {display: 'BS', btn: 'primary'}] },
-    {date: '1/05/2017', requisition: 2 , nid: '129741/24/35846', age: 22, gender: 'F', visit: 'Ambulatorio ',
+    {date: '1/05/2017', requisition: 2 , nid: '1297412435846', age: 22, gender: 'F', visit: 'Ambulatorio ',
     testsorders: [{display: 'Urineanalysis', btn: 'primary'}, {display: 'Pregnacy', btn: 'danger'}, {display: 'HB', btn: 'success'}, {display: 'BS', btn: 'info'}] },
-    {date: '1/05/2017', requisition: 2 , nid: '564781/13/68428', age: 20, gender: 'F', visit: 'Ambulatorio ',
+    {date: '1/05/2017', requisition: 2 , nid: '5647811368428', age: 20, gender: 'F', visit: 'Ambulatorio ',
     testsorders: [{display: 'Urineanalysis', btn: 'primary'}, {display: 'Pregnacy', btn: 'success'}, {display: 'HB', btn: 'danger'}, {display: 'BS', btn: 'primary'}] },
   ];
 }

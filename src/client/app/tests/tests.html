@@ -6,11 +6,16 @@
 
 					<div class="form-group">
 						<form action="" class="search">
-							<input type="text" class="form-control test-search" >
+							<input type="text" class="form-control test-search"  class="form-control test-search" type="text"
+							 ng-model="vm.searchQuery" placeholder="Digite o numero de requicao ou NID do paciente" >
 
 							<button class="btn btn-primary">
 									<i class="fa fa-search-plus"></i> Buscar
 							</button>
+								<input name="searchPatient" />
+
+
+							</form>
 						</form>
 					</div>
 
@@ -43,7 +48,7 @@
 												<td> {{ test.gender }} </td>
 												<td> {{ test.visit }} </td>
 												<!-- <td collspan="4" ng-repeat="ordertype in test"> {{ order }} </td> -->
-												<td ng-repeat="type in test.testsorders">
+												<td ng-repeat="type in test.testsorders|filter: vm.searchQuery ">
 												 <button class="btn btn-{{type.btn}}" uib-popover="Test Info" popover-title="Detalhes" popover-placement="bottom"> {{ type.display }} </button >
 												  </td>
 											</tr>
