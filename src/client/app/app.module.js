@@ -4,9 +4,10 @@
   angular.module('app', [
     'app.core',
     'app.widgets',
-    
+
     //3d party modules
     'ui.bootstrap',
+    'chart.js',
 
     //app modules
     'app.admin',
