@@ -70,6 +70,7 @@
 			logger.success('Paciente modificado com sucesso');
 		}
 
+
 	}//patientController
 
 

@@ -51,7 +51,7 @@
 					controllerAs: 'vm',
 					title: 'detalhes paciente',
 					settings: {
-						
+
 						content: '<i class="fa fa-user fa-lg"></i> Paciente '
 					}
 				}

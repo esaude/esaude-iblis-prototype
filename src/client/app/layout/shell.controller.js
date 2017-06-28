@@ -9,13 +9,13 @@
   /* @ngInject */
   function ShellController($rootScope, $timeout, config, logger) {
     var vm = this;
-    vm.busyMessage = 'Please wait ...';
+    vm.busyMessage = 'POR FAVOR AGUARDE ...';
     vm.isBusy = true;
     $rootScope.showSplash = true;
     vm.navline = {
       title: config.appTitle,
       text: 'Created by esaude',
-      link: 'https://github.com/esaude/esaude-emr-poc'
+      link: 'http://www.esaude.org/home'
     };
 
     activate();

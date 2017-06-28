@@ -24,6 +24,8 @@
 			vm.edit = edit;
 			vm.cancel = cancel;
 
+			vm.newPatient = newPatient;
+
 			//////////`
 			activate();
 
@@ -54,6 +56,11 @@
 
 			function cancel(nid) {
 				vm.currentEdit[nid] = false;
+			}
+
+			function newPatient() {
+				console.info("newPatient");
+				$state.go('patient');
 			}
 		}
 })();

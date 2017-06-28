@@ -24,56 +24,48 @@
         </div>
       </div>
       <div class="row">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+      Sumario de Testes
+      </div>
+    <div class="panel panel-body">
+        <div class="row">
+          <div class="col-md-12 page-header">
+            <h1>Monthly</h1>
+          </div>
 
-        <div class="col-md-6">
-          <div class="widget wgreen">
-            <div ht-widget-header title="{{vm.news.title}}" allow-collapse="true"></div>
-            <div class="widget-content text-center text-info">
-              <small>{{vm.news.description}}</small>
-            </div>
-            <div class="widget-foot">
-
-              <div class="row">
-                <div class="col-md-12 page-header">
-                  <h1>Mensal</h1>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-4 col-md-offset-1">
-                  <h2>Specimen Status</h2>
-                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data1" chart-labels="vm.labels1"
-                  chart-options="vm.options"></canvas>
-                </div>
-                <div class="col-md-4 col-md-offset-1">
-                  <h2>Test Status</h2>
-                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data2" chart-labels="vm.labels2"
-                  chart-options="vm.options"></canvas>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-12 page-header">
-                  <h1>Semanal</h1>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-4 col-md-offset-1">
-                  <h2>Specimen Status</h2>
-                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data3" chart-labels="vm.labels3"
-                  chart-options="vm.options"></canvas>
-                </div>
-                <div class="col-md-4 col-md-offset-1">
-                  <h2>Test Status</h2>
-                  <canvas id="pie" class="chart chart-pie" chart-data="vm.data4" chart-labels="vm.labels4"
-                  chart-options="vm.options"></canvas>
-                </div>
-              </div>
-
-            </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-1">
+            <h2>Specimen Status</h2>
+            <canvas id="pie" class="chart chart-pie" chart-data="vm.data1" chart-labels="vm.labels1"
+            chart-options="vm.options"></canvas>
+          </div>
+          <div class="col-md-4 col-md-offset-1">
+            <h2>Test Status</h2>
+            <canvas id="pie" class="chart chart-pie" chart-data="vm.data2" chart-labels="vm.labels2"
+            chart-options="vm.options"></canvas>
           </div>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 page-header">
+          <h1>Weekly </h1>
+        </div> 
+          <div class="row">
+            <div class="col-md-4 col-md-offset-1">
+              <h2>Specimen Status</h2>
+              <canvas id="pie" class="chart chart-pie" chart-data="vm.data3" chart-labels="vm.labels3"
+              chart-options="vm.options"></canvas>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+              <h2>Test Status</h2>
+              <canvas id="pie" class="chart chart-pie" chart-data="vm.data4" chart-labels="vm.labels4"
+              chart-options="vm.options"></canvas>
+            </div>
+          </div>
+</div>
+
       </div>
     </div>
   </section>
