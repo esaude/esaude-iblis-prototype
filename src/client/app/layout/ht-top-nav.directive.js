@@ -18,12 +18,18 @@
       templateUrl: 'app/layout/ht-top-nav.html'
     };
 
-    TopNavController.$inject = ['$scope'];
+    TopNavController.$inject = ['$scope', '$translate'];
 
     /* @ngInject */
-    function TopNavController($scope) {
+    function TopNavController($scope, $translate) {
       var vm = this;
       $scope.isCollapsed = true;
+
+      vm.changeLanguage = changeLanguage;
+
+      function changeLanguage(langKey) {
+        $translate.use(langKey);
+      }
     }
 
     return directive;

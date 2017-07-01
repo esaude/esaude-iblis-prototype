@@ -29,7 +29,9 @@
     "toastr": "~2.1.2",
     "angular-bootstrap": "^2.5.0",
     "lodash": "~4.17.4",
-    "angular-chart.js": "^1.1.1"
+    "angular-chart.js": "^1.1.1",
+    "angular-translate": "^2.15.2",
+    "angular-translate-loader-static-files": "^2.15.2"
   },
   "resolutions": {
     "angular": "~1.5.11",

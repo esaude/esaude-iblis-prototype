@@ -5,16 +5,18 @@
     .module('app.admin')
     .controller('AdminController', AdminController);
 
-  AdminController.$inject = ['logger'];
+  AdminController.$inject = ['logger', '$translate'];
   /* @ngInject */
-  function AdminController(logger) {
+  function AdminController(logger, $translate) {
     var vm = this;
-    vm.title = 'Administrador';
+    vm.title = 'Admin';
 
     activate();
 
     function activate() {
-      logger.info('Activated Administrator View');
+      $translate('ACTIVACTION_ADMIN').then(function(translationValue) {
+        logger.info(translationValue);
+      });
     }
   }
 

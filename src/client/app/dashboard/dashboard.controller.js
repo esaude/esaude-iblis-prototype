@@ -5,9 +5,9 @@
     .module('app.dashboard')
     .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$q', 'dataservice', 'logger'];
+  DashboardController.$inject = ['$q', 'dataservice', 'logger', '$translate'];
   /* @ngInject */
-  function DashboardController($q, dataservice, logger) {
+  function DashboardController($q, dataservice, logger, $translate) {
     var vm = this;
     vm.news = {
       title: 'eSaude iBlis',
@@ -36,7 +36,10 @@
     function activate() {
       var promises = [getMessageCount(), getPeople()];
       return $q.all(promises).then(function() {
-        logger.info('Activated Dashboard View');
+          $translate('ACTIVACTION_DASH').then(function (translationValue) {
+            logger.info(translationValue);
+        })
+
       });
     }
 

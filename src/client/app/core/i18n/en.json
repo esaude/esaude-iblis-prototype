@@ -1,0 +1,12 @@
+{
+  "Title": "Internationalization",
+  "Language":    "Language",
+  "Languages": {
+      "English": "English",
+      "Portuguese": "Portuguese"
+  },
+  "Created_By": "Created by eSaude 2",
+  "Splash_Msg": "Loading...",
+  "Dashboard": "Dashboard",
+  "Admin": "Administrator"
+}

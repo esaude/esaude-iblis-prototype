@@ -1,0 +1,20 @@
+{
+  "Title": "Internationalization",
+  "Language":    "Language",
+  "Languages": {
+      "English": "English",
+      "Portuguese": "Portuguese"
+  },
+  "Create_By": "Created by eSaude",
+  "Splash_Msg": "Loading...",
+  "Dashboard": "Dashboard",
+  "Admin": "Admin",
+  "First_Name": "First_Name",
+  "Last_Name": "Last_Name",
+  "Age": "Age",
+  "Location": "Location",
+  "Patients": "Patients",
+  "Message_Count": "{messageCount, plural, 0={No Message}, one{1 Message} other{# Messages}} ",
+  "": "",
+  "": ""
+}
