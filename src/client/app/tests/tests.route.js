@@ -24,7 +24,8 @@
 					title: 'Tests',
 					settings: {
 						nav: 4,
-						content: '<i class="fa fa-medkit fa-lg"></i> Testes '
+						icon: 'fa fa-medkit fa-lg',
+						content: 'Testes '
 					}
 				}
 			}

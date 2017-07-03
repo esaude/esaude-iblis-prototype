@@ -1,12 +1,37 @@
 {
-  "Title": "Internationalization",
-  "Language":    "Language",
-  "Languages": {
-      "English": "English",
-      "Portuguese": "Portuguese"
-  },
-  "Created_By": "Created by eSaude 2",
-  "Splash_Msg": "Loading...",
-  "Dashboard": "Dashboard",
-  "Admin": "Admin"
+ "Title": "Internacionalização",
+ "Language":    "Língua",
+ "Languages": {
+     "English": "Inglês",
+     "Portuguese": "Português"
+ },
+ "Created_By": "Criado por eSaude",
+ "Splash_Msg": "Carregando...",
+ "Dashboard": "Painel de controle",
+ "Admin": "Administrador",
+ "Tests": "Testes",
+ "First_Name": "Primeiro Nome",
+ "Last_Name": "Apelido",
+ "Age": "Idade",
+ "Location": "Localização",
+ "Patients": "Pacientes",
+ "Message_Count": "{messageCount, plural, 0={Sem Mensagens} one{1 Mensagem} other{# Mensagens}}",
+ "Admin_Unauthorized": "Faça login para acessar os recursos do administrador",
+ "Summary_Date": "Data de Resumo",
+ "Messages":"72 Resultados",
+ "Greeting": "{{name}} está logado",
+ "NID": "Patient NID",
+ "Name": "Nome",
+ "Gender": "Genero",
+ "Age": "Idade",
+ "Actions": "Acções",
+ "ACTIVACTION_DASH": "Pagina Dashboard Activa",
+ "ACTIVACTION_ADMIN": "Pagina Administracao Activa",
+
+ "Requisition_Date":"Data de Requisição",
+ "Requisition_ID":"Requisição de ID",
+ "NID":"NID",
+ "":"",
+ "":"",
+ "":""
 }

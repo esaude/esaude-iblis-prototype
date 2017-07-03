@@ -20,10 +20,11 @@
           templateUrl: 'app/dashboard/dashboard.html',
           controller: 'DashboardController',
           controllerAs: 'vm',
-          title: 'dashboard',
+          title: 'Dashboard',
           settings: {
-            nav: 1,
-            content: '<i class="fa fa-dashboard fa-lg"></i> Dashboard'
+            // nav: 1,
+            icon: 'fa fa-dashboard fa-lg',
+            content: 'Dashboard'
           }
         }
       }

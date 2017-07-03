@@ -5,10 +5,14 @@
     <div class="sidebar-inner">
       <div class="sidebar-widget"></div>
       <ul class="navi">
+
         <li class="nlightblue fade-selection-animation" ng-class="vm.isCurrent(r)" ng-repeat="r in vm.navRoutes">
-          <a ui-sref="{{r.name}}" ng-bind-html="r.settings.content" translate="{{r.title}}"></a>
+          <a ui-sref="{{r.name}}" > <i class="{{r.settings.icon}}"> </i>
+              {{ r.title | translate }} 
+            </a>
         </li>
       </ul>
     </div>
   </ht-sidebar>
 </div>
+}}

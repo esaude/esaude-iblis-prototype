@@ -26,7 +26,7 @@
 
     function getMessageCount() {
       console.info('Original getMessageCount called');
-      return $q.when(72);
+      return $q.when(0);
 
      }
 

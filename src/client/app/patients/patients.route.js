@@ -21,10 +21,11 @@
 					templateUrl: 'app/patients/patients.html',
 					controller: 'PatientsController',
 					controllerAs: 'vm',
-					title: 'patients',
+					title: 'Patients',
 					settings: {
 						nav: 3,
-						content: '<i class="fa fa-users fa-lg"> </i>  Pacientes'
+            icon: 'fa fa-users fa-lg',
+						content: 'Pacientes'
 					}
 				}
 			},

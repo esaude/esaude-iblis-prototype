@@ -17,11 +17,12 @@
         <ul class="dropdown-menu" role="menu">
             <li><a ng-click="vm.changeLanguage('en')" translate>Languages.English </a></li>
             <li><a ng-click="vm.changeLanguage('pt')" translate>Languages.Portuguese </a></li>
+              <!-- <li><a ng-click="vm.changeLanguage('xa')" translate>Languages.Xangana </a></li> -->
         </ul>
       </div>
 
       <ul class="nav navbar-nav pull-right">
-        <li>
+        <li ng-show="vm.loggedIn">
           <a  target="_blank" >
           <span class="bold" translate="Greeting" translate-value-name="Technician"> Admin is logged in </span>          </a>
         </li>
