@@ -32,7 +32,7 @@
             var content = angular.element(element).siblings('.widget-content');
             content.toggle();
           }
-        }
+        };
       }
     }
 

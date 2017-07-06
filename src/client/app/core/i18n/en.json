@@ -23,15 +23,14 @@
   "NID": "Patient NID",
   "Name": "Name",
   "Gender": "Gender",
-  "Age": "Age",
   "Actions": "Actions",
   "ACTIVACTION_DASH": "Dashboard View Activacted",
   "ACTIVACTION_ADMIN": "Admin View Activacted",
 
   "Requisition_Date":"Requisition Date",
   "Requisition_ID":"Requisition ID",
-  "NID":"NID",
-  "":"",
+  "NEW_TEST":"New Test",
   "":"",
   "":""
+
 }

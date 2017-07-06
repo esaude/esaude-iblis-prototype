@@ -64,7 +64,7 @@ function getTests() {
     {date: '1/05/2017', requisition: 2 , nid: '1297412435846', age: 22, gender: 'F', visit: 'Ambulatorio ',
     testsorders: [{display: 'Urineanalysis', btn: 'primary'}, {display: 'Pregnacy', btn: 'danger'}, {display: 'HB', btn: 'success'}, {display: 'BS', btn: 'info'}] },
     {date: '1/05/2017', requisition: 2 , nid: '5647811368428', age: 20, gender: 'F', visit: 'Ambulatorio ',
-    testsorders: [{display: 'Urineanalysis', btn: 'primary'}, {display: 'Pregnacy', btn: 'success'}, {display: 'HB', btn: 'danger'}, {display: 'BS', btn: 'primary'}] },
+    testsorders: [{display: 'Urineanalysis', btn: 'primary'}, {display: 'Pregnacy', btn: 'success'}, {display: 'HB', btn: 'danger'}, {display: 'BS', btn: 'primary'}] }
   ];
 }
 

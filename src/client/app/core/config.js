@@ -54,10 +54,10 @@
   core.run(function($rootScope) {
      $rootScope.$on('$translateChangeSuccess', function() {
        console.info('Tranlation SUCCESS ');
-     })
+     });
      $rootScope.$on('$translateChangeError', function() {
        console.info('Tranlation ERROR ');
-     })
+     });
   });
 
 })();

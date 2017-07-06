@@ -38,7 +38,7 @@
       return $q.all(promises).then(function() {
           $translate('ACTIVACTION_DASH').then(function (translationValue) {
             logger.info(translationValue);
-        })
+        });
 
       });
     }

@@ -21,6 +21,7 @@
 					<div class="panel panel-success">
 						<div class="panel panel-heading"> <i class="fa fa-hospital-o fa-2x "></i>
 							Lista de Testes
+							<button class="btn btn-success pull-right" ng-click="vm.goToNewTest()"><i class="fa fa-flask fa-plus fa-lg"></i> {{ 'NEW_TEST' | translate }}</button>
 						</div>
 						<div class="panel panel-body">
 							<table class="table table-stripped table-hover table-condensend">
@@ -48,9 +49,6 @@
 												 <button class="btn btn-{{type.btn}}" uib-popover="Test Info" popover-title="Detalhes" popover-placement="bottom"> {{ type.display }} </button >
 												  </td>
 											</tr>
-
-
-
 								</tbody>
 							</table>
 						</div>

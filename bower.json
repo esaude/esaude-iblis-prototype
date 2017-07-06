@@ -33,7 +33,8 @@
     "angular-translate": "^2.15.2",
     "angular-translate-loader-static-files": "^2.15.2",
     "angular-translate-interpolation-messageformat": "^2.15.2",
-    "angular-translate-handler-log": "^2.15.2"
+    "angular-translate-handler-log": "^2.15.2",
+    "metisMenu": "metismenu#^2.7.0"
   },
   "resolutions": {
     "angular": "~1.5.11",

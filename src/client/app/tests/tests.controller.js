@@ -2,13 +2,13 @@
 	'use strict';
 
 	angular
-		.module('app.patients')
+		.module('app.tests')
 		.controller('TestsController', TestsController);
 
-	TestsController.$inject = ['$q', 'dataservice', 'logger'];
+	TestsController.$inject = ['$q', 'dataservice', 'logger', '$state'];
 
 	/* @ngInject */
-	function TestsController($q, dataservice, logger) {
+	function TestsController($q, dataservice, logger, $state) {
 		var vm = this;
 		vm.news = {
 			title: 'Tests'
@@ -18,9 +18,11 @@
 		vm.tests = [];
 		vm.title = 'Tests';
 
+		vm.goToNewTest = goToNewTest;
+
 		vm.testState = ['.btn', '.btn-default', '.btn-primary', '.btn-success',
 		 '.btn-info', '.btn-warning', '.btn-danger', '.btn-link'];
-		
+
 		/////////
 		activate();
 
@@ -37,6 +39,11 @@
 					console.log(vm.tests);
 				return vm.tests;
 			});
+		}
+
+		function goToNewTest($state) {
+			console.info("Test");
+			$state.go('test');
 		}
 	}//testCOntroller
 

@@ -1,0 +1,116 @@
+<section id="dasboard-view" class="mainbar">
+    <section class="matter">
+        <div class="container">
+
+
+        </div>
+    </section>
+</section>
+
+<div>
+    <ol class="breadcrumb">
+        <li><a href="https://iblis-old.esaude.org/home">Home</a></li>
+        <li>
+            <a href="https://iblis-old.esaude.org/test">Tests</a>
+        </li>
+        <li class="active">New Test</li>
+    </ol>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading ">
+        <div class="container-fluid">
+            <div class="row less-gutter">
+                <div class="col-md-11">
+                    <span class="glyphicon glyphicon-adjust"></span>New Test
+                </div>
+                <div class="col-md-1">
+                    <a class="btn btn-sm btn-primary pull-right" href="#" onclick="window.history.back();return false;"
+                       alt="Previous Page" title="Previous Page">
+                        <span class="glyphicon glyphicon-backward"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <!-- if there are creation errors, they will show here -->
+        <form method="POST" action="https://iblis-old.esaude.org/test/savenewtest" accept-charset="UTF-8"
+              id="form-new-test"><input name="_token" type="hidden" value="xzNq9rRcMvkXKegvbVcwMZDpcMREdX7pLr5fthoB">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Patient Details</h3>
+                            </div>
+                            <div class="panel-body inline-display-details">
+                                <span><strong>Patient No.</strong> 10</span>
+                                <span><strong>Name</strong> Ana DOe</span>
+                                <span><strong>Age</strong> 1 years 3 months</span>
+													<span><strong>Gender</strong>
+														Female</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input name="patient_id" type="hidden" value="10">
+                            <label for="visit_type">Visit Type</label>
+                            <select class="form-control" id="visit_type" name="visit_type">
+                                <option value=" ">--- Select visit type ---</option>
+                                <option value="0">Out Patient</option>
+                                <option value="1">In Patient</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="physician">Requesting Physician</label>
+                            <input class="form-control" name="physician" type="text" id="physician">
+                        </div>
+                        <div class="form-group">
+                            <label for="tests">Select Test(s)</label>
+                            <div class="form-pane">
+
+                                <table class="table table-striped table-hover table-condensed search-table">
+                                    <thead>
+                                    <tr>
+                                        <th>Tests</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>BS for mps</td>
+                                        <td><label class="editor-active">
+                                            <input type="checkbox" name="testtypes[]" value="1"/>
+                                        </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HB</td>
+                                        <td><label class="editor-active">
+                                            <input type="checkbox" name="testtypes[]" value="4"/>
+                                        </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pregnancy Test</td>
+                                        <td><label class="editor-active">
+                                            <input type="checkbox" name="testtypes[]" value="13"/>
+                                        </label>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="form-group actions-row">
+                                    <button class="btn btn-primary" onclick="submit()" alt="save_new_test"
+                                            type="button"><span class='glyphicon glyphicon-save'></span> Save Test
+                                        Request
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+</div>

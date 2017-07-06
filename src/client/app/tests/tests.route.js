@@ -28,6 +28,21 @@
 						content: 'Testes '
 					}
 				}
+			},
+			{
+				state: 'test',
+				config: {
+					url: '/test',
+					templateUrl: 'app/tests/test.html',
+					controller: 'TestController',
+					controllerAs: 'vm',
+					title: 'Test',
+					settings: {
+						nav: 1,
+						ico: 'fa fa-flask fa-lg',
+						content: 'NEW_TEST'
+					}
+				}
 			}
 		];
 	}
