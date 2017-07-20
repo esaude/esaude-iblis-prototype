@@ -5,10 +5,10 @@
     .module('app.tests')
     .controller('TestController',TestController);
 
-    TestController.$inject = ['$q', 'dataservice', 'logger'];
+    TestController.$inject = ['$q', 'dataservice', 'logger', '$translate'];
 
     /* @ngInject */
-    function TestController($q, dataservice, logger) {
+    function TestController($q, dataservice, logger, $translate) {
         var vm = this;
         vm.news = { title: 'Test' };
 

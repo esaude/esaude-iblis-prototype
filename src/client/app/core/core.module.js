@@ -3,8 +3,9 @@
 
   angular
     .module('app.core', [
-      'ngAnimate', 'ngSanitize',
+      'ngAnimate', 'ngSanitize', 'ngMessages',
       'blocks.exception', 'blocks.logger', 'blocks.router',
-      'ui.router', 'ngplus', 'pascalprecht.translate'
+      'ui.router', 'ngplus', 'pascalprecht.translate','ui.bootstrap',
+        'chart.js'
     ]);
 })();

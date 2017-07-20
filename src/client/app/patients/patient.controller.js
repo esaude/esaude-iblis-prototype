@@ -5,12 +5,11 @@
 		.module('app.patients')
 		.controller('PatientController', PatientController);
 
-	PatientController.$inject = ['$state', '$q', '$stateParams', 'dataservice', 'logger'];
+	PatientController.$inject = ['$state', '$q', '$stateParams', 'dataservice', 'logger', '$translate'];
 
 	/* @ngInject */
-	function PatientController($state, $q, $stateParams, dataservice, logger) {
+	function PatientController($state, $q, $stateParams, dataservice, logger, $translate) {
 		var vm = this;
-		// console.warn(vm);
 
 		vm.patient = undefined;
 
@@ -29,12 +28,13 @@
 
 		vm.getPatient = getPatient;
 		// vm.gotoPatient = gotoPatient;
-
 		///////////////////////////////////////////////////
 
 		function activate() {
 			return getPatient(patiendNID).then(function() {
-				logger.info('Pagina de Detalhes de Paciente Activa ');
+				$translate('ACTIVACTION_DETAILS').then(function(translationValue) {
+					 logger.info(translationValue);
+				});
 			});
 		}
 
@@ -48,7 +48,9 @@
 					console.info(result);
 					vm.patient = result;
 					vm.original = angular.copy(vm.patient);
-					logger.success('Encontrou 1 paciente');
+					$translate('PATIENT_FOUND').then(function(translationValue) {
+							logger.success(translationValue);
+					});
 					return vm.patient;
 				});
 		}
@@ -68,7 +70,9 @@
 
 		function save() {
 			vm.original = angular.copy(vm.patient);
-			logger.success('Paciente modificado com sucesso');
+			dataservice.savePatient(vm.original).then(function(result) {
+				logger.success('Paciente modificado com sucesso');
+			});
 		}
 
 

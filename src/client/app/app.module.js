@@ -3,15 +3,14 @@
 
   angular.module('app', [
     'app.core',
-    'app.widgets',
+    // 'app.widgets',
 
     //3d party modules
-    'ui.bootstrap',
-    'chart.js',
+
 
     //app modules
     'app.admin',
-    'app.dashboard',
+    // 'app.dashboard',
     'app.layout',
     'app.patients',
     'app.tests'

@@ -22,16 +22,33 @@
  "Greeting": "{{name}} está logado",
  "NID": "Patient NID",
  "Name": "Nome",
+ "Surname": "Apelido",
  "Gender": "Genero",
  "Age": "Idade",
+ "ADDRESS": "Endereco",
  "Actions": "Acções",
  "ACTIVACTION_DASH": "Pagina Dashboard Activa",
  "ACTIVACTION_ADMIN": "Pagina Administracao Activa",
+ "ACTIVACTION_TESTS": "Pagina de Testes Activa",
+ "ACTIVACTION_DETAILS": "Pagina de Detalhes de Paciente Activa",
 
  "Requisition_Date":"Data de Requisição",
  "Requisition_ID":"Requisição de ID",
  "NID":"NID",
  "NEW_TEST":"Novo Teste",
+ "PATIENT_DETAILS": "Detalhes de Paciente",
+ "PATIENT_FOUND": "Encontrou 1 paciente",
+ "SAVE":"Save",
+ "CANCEL": "Cancelar",
+ "GO_BACK": "Voltar",
+
+ "/*Fields of VALIDATIONS */":"",
+ "REQUIRED_FIELD": "Este campo é obrigatório",
+ "MINLENGTH_FIELD": "Este campo é muito curto ",
+ "MAXLENGTH_FIELD": "TEste campo é muito longo",
+ "EMAIL": "Este campo precisa ser um e-mail válido",
+ "PATTERN": "O formato do padrão é inválido ",
+
  "":"",
  "":""
 }

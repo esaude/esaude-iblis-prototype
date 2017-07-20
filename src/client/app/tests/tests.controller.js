@@ -5,10 +5,10 @@
 		.module('app.tests')
 		.controller('TestsController', TestsController);
 
-	TestsController.$inject = ['$q', 'dataservice', 'logger', '$state'];
+	TestsController.$inject = ['$q', 'dataservice', 'logger', '$state', '$translate'];
 
 	/* @ngInject */
-	function TestsController($q, dataservice, logger, $state) {
+	function TestsController($q, dataservice, logger, $state, $translate) {
 		var vm = this;
 		vm.news = {
 			title: 'Tests'
@@ -19,6 +19,7 @@
 		vm.title = 'Tests';
 
 		vm.goToNewTest = goToNewTest;
+		vm.getMessageCount = getMessageCount;
 
 		vm.testState = ['.btn', '.btn-default', '.btn-primary', '.btn-success',
 		 '.btn-info', '.btn-warning', '.btn-danger', '.btn-link'];
@@ -29,7 +30,9 @@
 		function activate() {
 			var promises = [getTests()];
 			return $q.all(promises).then(function() {
-				logger.info('Pagina de Tests Activa ');
+				$translate('ACTIVACTION_TESTS').then(function(translationValue) {
+						logger.info(translationValue);
+				});
 			});
 		}
 
@@ -41,11 +44,14 @@
 			});
 		}
 
+		function getMessageCount() {
+			return vm.messageCount = vm.tests.length;
+		}
+
 		function goToNewTest($state) {
 			console.info("Test");
 			$state.go('test');
 		}
 	}//testCOntroller
-
 
 })();
