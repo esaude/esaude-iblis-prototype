@@ -38,18 +38,18 @@ q<section class="mainbar">
             <div class="col-sm-6">
               <div class="form-group"
               ng-class="{'has-error':patientForm.nid.$touched && patientForm.nid.$invalid}" >
-                  <label for="nid" class="control-label" translate="NID"> NID </label>
-                  <input name="nid" class="form-control" ng-model="vm.patient.nid" placeholder="NID" required minlength="5" >
+                  <label for="nid" class="control-label" translate="NID">  </label>
+                  <input name="nid" class="form-control" ng-model="vm.patient.nid" placeholder="{{'NID' | translate }}" required minlength="5" >
                   <div class="help-block" ng-messages="patientForm.nid.$error">
                       <div ng-messages-include="app/core/validation-messages.html"> </div>
                   </div>
               </div>
               <div class="form-group"
               ng-class="{'has-error':patientForm.firstName.$touched && patientForm.firstName.$invalid}" >
-                <label for="" class="control-label" translate="Name"> Nome  </label>
+                <label for="" class="control-label" translate="NAME">   </label>
                 <div>
                   <input class="form-control" ng-model="vm.patient.firstName" name="firstName"
-                  placeholder="{{'Name'| translate }}" required minlength="3">
+                  placeholder="{{'NAME'| translate }}" required minlength="3">
                   <div class="help-block" ng-messages="patientForm.firstName.$error">
                       <div ng-messages-include="app/core/validation-messages.html"> </div>
                   </div>
@@ -57,9 +57,9 @@ q<section class="mainbar">
               </div>
               <div class="form-group"
               ng-class="{'has-error':patientForm.lastName.$touched && patientForm.lastName.$invalid}">
-                <label for="" class="control-label" translate="Surname">  </label>
+                <label for="" class="control-label" translate="SURNAME">  </label>
                 <div>
-                  <input class="form-control" ng-model="vm.patient.lastName" placeholder="Apelido"
+                  <input class="form-control" name="lastName" ng-model="vm.patient.lastName" placeholder="{{'SURNAME' | translate}}"
                   required minlength="3" >
                   <div class="help-block" ng-messages="patientForm.lastName.$error">
                       <div ng-messages-include="app/core/validation-messages.html"> </div>
@@ -68,9 +68,9 @@ q<section class="mainbar">
               </div>
               <div class="form-group"
               ng-class="{'has-error':patientForm.age.$touched && patientForm.age.$invalid}" >
-                <label for="" class="control-label" translate="Age">  </label>
+                <label for="" class="control-label" translate="AGE">  </label>
                 <div>
-                  <input type="number" class="form-control" ng-model="vm.patient.age" placeholder="Idade"
+                  <input type="number" class="form-control" name="age" ng-model="vm.patient.age" placeholder="{{'AGE' | translate}}"
                   required minlength="3" min="0">
                   <div class="help-block" ng-messages="patientForm.age.$error">
                       <div ng-messages-include="app/core/validation-messages.html"> </div>
@@ -81,7 +81,7 @@ q<section class="mainbar">
               ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}" >
                 <label for="" class="control-label" translate="ADDRESS">  </label>
                 <div>
-                  <input class="form-control" ng-model="vm.patient.location" placeholder="Endereco"
+                  <input class="form-control" name="location" ng-model="vm.patient.location" placeholder="{{'ADDRESS' | translate}}"
                   required minlength="3">
                   <div class="help-block" ng-messages="patientForm.location.$error">
                       <div ng-messages-include="app/core/validation-messages.html"> </div>
