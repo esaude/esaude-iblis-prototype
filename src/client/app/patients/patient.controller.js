@@ -18,11 +18,11 @@
 		vm.getFullName = getFullName;
 		vm.save = save;
 
-		vm.title = 'Paciente';
+		vm.title = 'PATIENT';
 
-		var patiendNID = $stateParams.nid;
+		vm.patiendNID = $stateParams.nid;
 
-		if(patiendNID) {
+		if(vm.patiendNID) {
 		activate();
 		}
 
@@ -31,7 +31,7 @@
 		///////////////////////////////////////////////////
 
 		function activate() {
-			return getPatient(patiendNID).then(function() {
+			return getPatient(vm.patiendNID).then(function() {
 				$translate('ACTIVACTION_DETAILS').then(function(translationValue) {
 					 logger.info(translationValue);
 				});
@@ -47,6 +47,7 @@
 				.then(function(result) {
 					console.info(result);
 					vm.patient = result;
+					// vm.newPatient = false;
 					vm.original = angular.copy(vm.patient);
 					$translate('PATIENT_FOUND').then(function(translationValue) {
 							logger.success(translationValue);
@@ -74,9 +75,7 @@
 				logger.success('Paciente modificado com sucesso');
 			});
 		}
-
-
+		console.info(vm);
 	}//patientController
-
 
 })();

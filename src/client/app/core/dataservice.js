@@ -86,7 +86,7 @@
     }
 
     function savePatient() {
-
+      // return $
     }
     function deletePatient() {
 
@@ -99,10 +99,6 @@
       }
 
     }
-
-
-
-
 
     function getTests() {
       return $http.get('/api/tests').then(success).catch(fail);

@@ -48,6 +48,9 @@
  "MAXLENGTH_FIELD": "TEste campo é muito longo",
  "EMAIL": "Este campo precisa ser um e-mail válido",
  "PATTERN": "O formato do padrão é inválido ",
+ "CREATE_PATIENT": "Criar paciente",
+
+   "404": "Página Não Encontrada",
 
  "":"",
  "":""

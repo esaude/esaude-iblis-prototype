@@ -5,10 +5,10 @@
 		.module('app.patients')
 		.controller('PatientsController', PatientsController);
 
-		PatientsController.$inject = ['$state', '$q', 'dataservice', 'logger'];
+		PatientsController.$inject = ['$state', '$q', 'dataservice', 'logger', '$translate'];
 
 		/* @ngInject */
-		function PatientsController($state, $q, dataservice, logger) {
+		function PatientsController($state, $q, dataservice, logger, $translate) {
 			var vm = this;
 			console.warn(vm);
 
@@ -16,7 +16,6 @@
 			vm.title = 'Patients';
 
 			vm.currentEdit = {};
-
 			/**
 			*	API declaration and registration
 			*/
@@ -32,7 +31,10 @@
 			function activate() {
 				var promises = [getPatients()];
 				return $q.all(promises).then(function() {
-					logger.info('Pagina de Pacientes Activa');
+					$translate('PATIENTS_ACTIVE').then(function(translationValue) {
+							logger.info(translationValue);
+					});
+
 				});
 			}
 
