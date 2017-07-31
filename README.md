@@ -4,7 +4,8 @@
 
 # iBlis Prototype Point of Care
 
-[![Build Status](https://img.shields.io/travis/esaude/esaude-emr-poc/master.svg)](https://travis-ci.org)
+[![Build Status](https://travis-ci.org/esaude/esaude-iblis-prototype.svg?branch=master)](https://travis-ci.org)
+[![Coverage Status](https://coveralls.io/repos/github/esaude/esaude-iblis-prototype/badge.svg?branch=master)](https://coveralls.io/github/esaude/esaude-iblis-prototype?branch=master)
 [![Code Quality](https://img.shields.io/codacy/10ea6c2d88674139b37cae5fa73cc8f6/master.svg)](https://)
 [![Test Coverage](https://api.codacy.com/project/badge/coverage/10ea6c2d88674139b37cae5fa73cc8f6)](https://)
 [![Dependency Status](https://gemnasium.com/badges/github.com/esaude/esaude-emr-poc.svg)](https://)

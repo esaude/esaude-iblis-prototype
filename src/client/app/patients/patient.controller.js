@@ -74,8 +74,7 @@
 			dataservice.savePatient(vm.original).then(function(result) {
 				logger.success('Paciente modificado com sucesso');
 			});
-		}
-		console.info(vm);
+		} 
 	}//patientController
 
 })();

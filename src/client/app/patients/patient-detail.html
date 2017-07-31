@@ -112,6 +112,19 @@
                 </div>
               </div>
 
+              <div class="form-group"
+              ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}" >
+                <label for="" class="control-label" translate="ADDRESS">  </label>
+                <div>
+                  <input class="form-control" name="location" ng-model="vm.patient.location"
+                  placeholder="{{'ADDRESS' | translate}}"
+                  required minlength="3">
+                  <div class="help-block" ng-messages="patientForm.location.$error">
+                      <div ng-messages-include="app/core/validation-messages.html"> </div>
+                  </div>
+                </div>
+              </div>
+
 
 
 
