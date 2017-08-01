@@ -38,7 +38,7 @@
 					controllerAs: 'vm',
 					title: 'Test',
 					settings: {
-						nav: 1,
+						// nav: 1,
 						ico: 'fa fa-flask fa-lg',
 						content: 'NEW_TEST'
 					}

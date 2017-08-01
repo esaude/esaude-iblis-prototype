@@ -6,9 +6,9 @@
 
 [![Build Status](https://travis-ci.org/esaude/esaude-iblis-prototype.svg?branch=master)](https://travis-ci.org)
 [![Coverage Status](https://coveralls.io/repos/github/esaude/esaude-iblis-prototype/badge.svg?branch=master)](https://coveralls.io/github/esaude/esaude-iblis-prototype?branch=master)
-[![Code Quality](https://img.shields.io/codacy/10ea6c2d88674139b37cae5fa73cc8f6/master.svg)](https://)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f5c045d801c54cddad7a5c049e6def3c)](https://www.codacy.com/app/larslemos/esaude-iblis-prototype?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=esaude/esaude-iblis-prototype&amp;utm_campaign=Badge_Grade)
 [![Test Coverage](https://api.codacy.com/project/badge/coverage/10ea6c2d88674139b37cae5fa73cc8f6)](https://)
-[![Dependency Status](https://gemnasium.com/badges/github.com/esaude/esaude-emr-poc.svg)](https://)
+[![Dependency Status](https://gemnasium.com/badges/github.com/esaude/esaude-iblis-prototype.svg)](https://gemnasium.com/github.com/esaude/esaude-iblis-prototype)
 
 [![eSaude Version](https://omrs-shields.psbrandt.io/custom/esaude/v1.2.0/brightgreen?logo=esaude)](http://)
 
@@ -17,7 +17,11 @@
 This project is an AngularJS application for point of care based on iBLIS and using
 The UI was designed for tablet-like interfaces with touch screen and virtual keyboard.
 
-A demo of the system can be found [here](http://metadata.esaude.org/home).
+A demo of the system can be found [here](https://iblis.esaude.org/).
+
+A development demo of the system can be found   [here](https://esaude-iblis.herokuapp.com/).
+
+The back-end system of iBLIS can be found [here](https://iblis-old.esaude.org).
 
 ## Setup (Development Environment)
 
@@ -69,26 +73,27 @@ The app has 5 feature modules and depends on a series of external modules and cu
 
 ```
 app --> [
-        app.admin --> [
-            app.core,
-            app.widgets
-        ],
-        app.dashboard --> [
-            app.core,
-            app.widgets
-        ],
+        app.admin,
+        app.dashboard
+        app.patients,
+        app.tests,
+                        --> [
+                        app.core,
+                        app.widgets
+                    ],
         app.layout --> [
             app.core
         ],
         app.widgets,
-		app.core --> [
-			ngAnimate,
-			ui.router,
-      ngSanitize,
-			blocks.exception,
-			blocks.logger,
-			blocks.router
-		]
+    		app.core --> [
+    			ngAnimate,
+    			ui.router,
+          ngSanitize,
+    			blocks.exception,
+    			blocks.logger,
+    			blocks.router
+    		],
+
     ]
 ```
 

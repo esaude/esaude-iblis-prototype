@@ -19,7 +19,7 @@
 		vm.title = 'Tests';
 
 		vm.goToNewTest = goToNewTest;
-		vm.getMessageCount = getMessageCount;
+		// vm.getMessageCount = getMessageCount;
 
 		vm.testState = ['.btn', '.btn-default', '.btn-primary', '.btn-success',
 		 '.btn-info', '.btn-warning', '.btn-danger', '.btn-link'];
@@ -45,12 +45,13 @@
 		}
 
 		function getMessageCount() {
-			return vm.messageCount = vm.tests.length;
+			 vm.messageCount = vm.tests.length;
+			//  return vm.messageCount;
 		}
 
 		function goToNewTest($state) {
 			console.info("Test");
-			$state.go('test');
+			// $state.go('test');
 		}
 	}//testCOntroller
 

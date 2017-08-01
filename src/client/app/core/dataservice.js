@@ -10,12 +10,11 @@
   function dataservice($http, $q, exception) {
     var service = {
       //patients
-      getPeople: getPeople,
       getMessageCount: getMessageCount,
       getPatients: getPatients,
       getTests: getTests,
 
-      //patients
+      //patient
       getPatient : getPatient,
       addPatient: addPatient,
       savePatient: savePatient,
@@ -27,20 +26,7 @@
     function getMessageCount() {
       console.info('Original getMessageCount called');
       return $q.when(0);
-
      }
-
-    function getPeople() {
-      return $http.get('/api/people').then(success).catch(fail);
-
-      function success(response) {
-        return response.data;
-      }
-
-      function fail(e) {
-        return exception.catcher('XHR Failed for getPeople')(e);
-      }
-    }
 
     /**
      *  Patient CRUD
@@ -49,7 +35,6 @@
        return $http.get('/api/patient/'+id).then(success).catch(fail);
 
        function success(response) {
-
           return response.data[0];
         }
 
@@ -62,13 +47,10 @@
       return $http.get('/api/patients').then(success).catch(fail);
 
         function success(response) {
-          // console.info("SUCCESS: getPatients");
-          // console.info(response);
           return response.data;
         }
 
         function fail(description) {
-          // console.error("Error occured in: getPatients");
           return exception.catcher('XHR Failed for getPatients')(description);
         }
     }

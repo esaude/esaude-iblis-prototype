@@ -17,7 +17,7 @@
 			{
 				state: 'patients',
 				config: {
-					url: '/patients',
+					url: '/',
 					templateUrl: 'app/patients/patients.html',
 					controller: 'PatientsController',
 					controllerAs: 'vm',

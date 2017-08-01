@@ -16,13 +16,13 @@
       {
         state: 'admin',
         config: {
-          url: '/',
+          url: '/admin',
           templateUrl: 'app/admin/admin.html',
           controller: 'AdminController',
           controllerAs: 'vm',
           title: 'Admin',
           settings: {
-            nav: 2,
+            // nav: 2,
             icon: 'fa fa-lock fa-lg',
             content: 'Admin'
           }
