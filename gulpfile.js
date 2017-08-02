@@ -2,6 +2,7 @@ var args = require('yargs').argv;
 var browserSync = require('browser-sync');
 var config = require('./gulp.config')();
 var del = require('del');
+var eslint = require('gulp-eslint');
 var glob = require('glob');
 var gulp = require('gulp');
 var path = require('path');
@@ -35,14 +36,14 @@ gulp.task('default', ['help']);
  * @return {Stream}
  */
 gulp.task('vet', function() {
-  log('Analyzing source with JSHint and JSCS');
+  log('Analyzing source with ESLint and JSCS');
 
   return gulp
-    .src(config.alljs)
+    .src(config.js)
     .pipe($.if(args.verbose, $.print()))
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
-    // .pipe($.jshint.reporter('fail'))
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
     .pipe($.jscs());
 });
 
@@ -307,7 +308,7 @@ gulp.task('clean-code', function(done) {
  *    gulp test --startServers
  * @return {Stream}
  */
-gulp.task('test', ['templatecache'], function(done) {
+gulp.task('test', ['vet', 'templatecache'], function(done) {
   startTests(true /*singleRun*/, done);
 });
 

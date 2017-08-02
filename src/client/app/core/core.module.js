@@ -1,11 +1,18 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('app.core', [
-            'ngAnimate', 'ngSanitize', 'ngMessages',
-            'blocks.exception', 'blocks.logger', 'blocks.router',
-            'ui.router', 'ngplus', 'pascalprecht.translate', 'ui.bootstrap',
-            'chart.js'
-        ]);
+  angular
+    .module('app.core', [
+      'blocks.exception',
+      'blocks.logger',
+      'blocks.router',
+      'chart.js',
+      'ngAnimate',
+      'ngMessages',
+      'ngplus',
+      'ngSanitize',
+      'pascalprecht.translate',
+      'ui.bootstrap',
+      'ui.router'
+    ]);
 })();

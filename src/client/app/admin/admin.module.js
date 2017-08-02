@@ -1,9 +1,9 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular.module('app.admin', [
-        'app.core',
-        'app.widgets'
-    ]);
+  angular.module('app.admin', [
+    'app.core',
+    'app.widgets'
+  ]);
 
 })();
