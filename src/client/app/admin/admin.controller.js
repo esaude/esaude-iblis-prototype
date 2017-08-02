@@ -1,21 +1,23 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('app.admin')
-    .controller('AdminController', AdminController);
+    angular
+        .module('app.admin')
+        .controller('AdminController', AdminController);
 
-  AdminController.$inject = ['logger'];
-  /* @ngInject */
-  function AdminController(logger) {
-    var vm = this;
-    vm.title = 'Administrador';
+    AdminController.$inject = ['logger', '$translate'];
+    /* @ngInject */
+    function AdminController(logger, $translate) {
+        var vm = this;
+        vm.title = 'Admin';
 
-    activate();
+        activate();
 
-    function activate() {
-      logger.info('Activated Administrator View');
+        function activate() {
+            $translate('ACTIVACTION_ADMIN').then(function (translationValue) {
+                logger.info(translationValue);
+            });
+        }
     }
-  }
 
 })();

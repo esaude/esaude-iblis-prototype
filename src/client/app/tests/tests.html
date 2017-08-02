@@ -1,62 +1,66 @@
 <section id="dasboard-view" class="mainbar">
-	<section class="matter">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
 
-					<div class="form-group">
-						<form action="" class="search">
-							<input type="text" class="form-control test-search"  class="form-control test-search" type="text"
-							 ng-model="vm.searchQuery" placeholder="Digite o numero de requisicao ou NID do paciente" >
+                    <div class="form-group">
+                        <form action="" class="search">
+                            <input type="text" class="form-control test-search" class="form-control test-search"
+                                   type="text"
+                                   ng-model="vm.searchQuery"
+                                   placeholder="Digite o numero de requisicao ou NID do paciente">
 
-							<a class="btn btn-primary">
-									<i class="fa fa-search-plus"></i> Buscar
-							</a>
-						</form>
-					</div>
+                            <a class="btn btn-primary">
+                                <i class="fa fa-search-plus"></i> Buscar
+                            </a>
+                        </form>
+                    </div>
 
-				</div>
+                </div>
 
-				<div class="col-md-12">
-					<div class="panel panel-success">
-						<div class="panel panel-heading"> <i class="fa fa-hospital-o fa-2x "></i>
-							Lista de Testes
-						</div>
-						<div class="panel panel-body">
-							<table class="table table-stripped table-hover table-condensend">
-								<thead>
-									<tr>
-										<th>Data de Requisicao </th>
-										<th>ID Requisicao </th>
-										<th>NID </th>
-										<th>Idade</th>
-										<th>Genero </th>
-										<th>Tipo de Visita </th>
-										<th collspan="4">Testes </th>
-									</tr>
-								</thead>
-								<tbody>
-											<tr ng-repeat="test in vm.tests">
-												<td> {{ test.date }} </td>
-												<td> {{ test.requisition }} </td>
-												<td> {{ test.nid }}</td>
-												<td> {{ test.age }} </td>
-												<td> {{ test.gender }} </td>
-												<td> {{ test.visit }} </td>
-												<!-- <td collspan="4" ng-repeat="ordertype in test"> {{ order }} </td> -->
-												<td ng-repeat="type in test.testsorders|filter: vm.searchQuery ">
-												 <button class="btn btn-{{type.btn}}" uib-popover="Test Info" popover-title="Detalhes" popover-placement="bottom"> {{ type.display }} </button >
-												  </td>
-											</tr>
-
-
-
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                <div class="col-md-12">
+                    <div class="panel panel-success">
+                        <div class="panel panel-heading"><i class="fa fa-hospital-o fa-2x "></i>
+                            Lista de Testes
+                            <button class="btn btn-success pull-right" ng-click="vm.goToNewTest()"><i
+                                    class="fa fa-flask fa-plus fa-lg"></i> {{ 'NEW_TEST' | translate }}
+                            </button>
+                        </div>
+                        <div class="panel panel-body">
+                            <table class="table table-stripped table-hover table-condensend">
+                                <thead>
+                                <tr>
+                                    <th translate="Requisition_ID"></th>
+                                    <th>{{ 'Requisition_ID' | translate}}</th>
+                                    <th> {{'NID'}}</th>
+                                    <th translate="Age"></th>
+                                    <th translate="Gender"></th>
+                                    <th translate="">Tipo de Visita</th>
+                                    <th collspan="4">Testes</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="test in vm.tests">
+                                    <td> {{ test.date }}</td>
+                                    <td> {{ test.requisition }}</td>
+                                    <td> {{ test.nid }}</td>
+                                    <td> {{ test.age }}</td>
+                                    <td> {{ test.gender }}</td>
+                                    <td> {{ test.visit }}</td>
+                                    <!-- <td collspan="4" ng-repeat="ordertype in test"> {{ order }} </td> -->
+                                    <td ng-repeat="type in test.testsorders|filter: vm.searchQuery ">
+                                        <button class="btn btn-{{type.btn}}" uib-popover="Test Info"
+                                                popover-title="Detalhes" popover-placement="bottom"> {{ type.display }}
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>

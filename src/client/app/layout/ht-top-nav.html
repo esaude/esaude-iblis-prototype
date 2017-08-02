@@ -1,27 +1,43 @@
 <nav class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-header">
-    <a href="/" class="navbar-brand"><span class="brand-title">{{vm.navline.title}}</span></a>
-    <a class="btn navbar-btn navbar-toggle" ng-click="isCollapsed = !isCollapsed">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </a>
-  </div>
-  <div class="navbar-collapse collapse" uib-collapse="isCollapsed">
-    <div class="pull-right navbar-logo">
-      <ul class="nav navbar-nav pull-right">
-        <li>
-          <a ng-href="{{vm.navline.link}}" target="_blank">
-                        {{vm.navline.text}}
-                    </a>
-        </li>
-        <li class="dropdown dropdown-big">
-          
-        </li>
-        <li>
-          
-        </li>
-      </ul>
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand"><span class="brand-title">{{vm.navline.title}}</span></a>
+        <a class="btn navbar-btn navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
     </div>
-  </div>
+
+    <div class="navbar-collapse collapse" uib-collapse="isCollapsed">
+        <div class="pull-right navbar-logo">
+            <div class="dropdown nav navbar-nav pull-left">
+                <button id="dLabel" type="button" data-toggle="dropdown" translate="Language">
+                    <span class="caret"> </span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ng-click="vm.changeLanguage('en')" translate>Languages.English </a></li>
+                    <li><a ng-click="vm.changeLanguage('pt')" translate>Languages.Portuguese </a></li>
+                    <!-- <li><a ng-click="vm.changeLanguage('xa')" translate>Languages.Xangana </a></li> -->
+                </ul>
+            </div>
+
+            <ul class="nav navbar-nav pull-right">
+                <li ng-show="vm.loggedIn">
+                    <a target="_blank">
+                        <span class="bold" translate="Greeting"
+                              translate-value-name="Technician"> Admin is logged in </span> </a>
+                </li>
+                <li>
+                    <a ng-href="{{vm.navline.link}}" target="_blank" translate="Created_By">
+                    </a>
+                </li>
+                <li class="dropdown dropdown-big">
+
+                </li>
+                <li>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 </nav>

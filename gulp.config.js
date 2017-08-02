@@ -22,11 +22,11 @@ module.exports = function() {
     // all javascript that we want to vet
     alljs: [
       './src/**/*.js',
-      './*.js'
     ],
     build: './build/',
     client: client,
-    css: temp + 'styles.css',
+    // css: temp + 'styles.css',
+    css: client + '/styles/style-alternate.css',
     fonts: bower.directory + 'font-awesome/fonts/**/*.*',
     html: client + '**/*.html',
     htmltemplates: clientApp + '**/*.html',

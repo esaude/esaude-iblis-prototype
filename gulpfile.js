@@ -42,7 +42,7 @@ gulp.task('vet', function() {
     .pipe($.if(args.verbose, $.print()))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
-    .pipe($.jshint.reporter('fail'))
+    // .pipe($.jshint.reporter('fail'))
     .pipe($.jscs());
 });
 
@@ -307,7 +307,7 @@ gulp.task('clean-code', function(done) {
  *    gulp test --startServers
  * @return {Stream}
  */
-gulp.task('test', ['vet', 'templatecache'], function(done) {
+gulp.task('test', ['templatecache'], function(done) {
   startTests(true /*singleRun*/, done);
 });
 

@@ -1,72 +1,74 @@
 <section id="dashboard-view" class="mainbar">
-  <section class="matter">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="today-datas">
-            <li class="blightblue">
-              <div class="pull-left"><i class="fa fa-eyedropper fa-2x"></i></div>
-              <div class="datas-text pull-right">
-                <span class="bold">Testes - 19 </span>
-              </div>
-              <div class="clearfix"></div>
-            </li>
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="today-datas">
+                        <li class="blightblue">
+                            <div class="pull-left"><i class="fa fa-eyedropper fa-2x"></i></div>
+                            <div class="datas-text pull-right">
+                                <span class="bold" translate="Summary_Date">Testes - 19 </span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
 
-            <li class="borange">
-              <div class="pull-left"><i class="fa fa-envelope"></i></div>
-              <div class="datas-text pull-right">
-                <span class="bold">{{vm.messageCount}}</span> Resultados
-              </div>
-              <div class="clearfix"></div>
-            </li>
+                        <li class="borange">
+                            <div class="pull-left"><i class="fa fa-envelope"></i></div>
+                            <div class="datas-text pull-right">
+                <span class="bold" translate="Message_Count"
+                      translate-values="{messageCount: vm.messageCount}"
+                      translate-interpolation="messageformat">  {{vm.messageCount}}</span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
 
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-<div class="panel panel-primary">
-  <div class="panel-heading">
-      Sumario de Testes
-      </div>
-    <div class="panel panel-body">
-        <div class="row">
-          <div class="col-md-12 page-header">
-            <h1>Monthly</h1>
-          </div>
-
-        <div class="row">
-          <div class="col-md-4 col-md-offset-1">
-            <h2>Specimen Status</h2>
-            <canvas id="pie" class="chart chart-pie" chart-data="vm.data1" chart-labels="vm.labels1"
-            chart-options="vm.options"></canvas>
-          </div>
-          <div class="col-md-4 col-md-offset-1">
-            <h2>Test Status</h2>
-            <canvas id="pie" class="chart chart-pie" chart-data="vm.data2" chart-labels="vm.labels2"
-            chart-options="vm.options"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 page-header">
-          <h1>Weekly </h1>
-        </div> 
-          <div class="row">
-            <div class="col-md-4 col-md-offset-1">
-              <h2>Specimen Status</h2>
-              <canvas id="pie" class="chart chart-pie" chart-data="vm.data3" chart-labels="vm.labels3"
-              chart-options="vm.options"></canvas>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-4 col-md-offset-1">
-              <h2>Test Status</h2>
-              <canvas id="pie" class="chart chart-pie" chart-data="vm.data4" chart-labels="vm.labels4"
-              chart-options="vm.options"></canvas>
-            </div>
-          </div>
-</div>
 
-      </div>
-    </div>
-  </section>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Sumario de Testes
+                </div>
+                <div class="panel panel-body">
+                    <div class="row">
+                        <div class="col-md-12 page-header">
+                            <h1>Monthly</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-1">
+                                <h2>Specimen Status</h2>
+                                <canvas id="pie" class="chart chart-pie" chart-data="vm.data1" chart-labels="vm.labels1"
+                                        chart-options="vm.options"></canvas>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <h2>Test Status</h2>
+                                <canvas id="pie" class="chart chart-pie" chart-data="vm.data2" chart-labels="vm.labels2"
+                                        chart-options="vm.options"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 page-header">
+                            <h1>Weekly </h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-1">
+                                <h2>Specimen Status</h2>
+                                <canvas id="pie" class="chart chart-pie" chart-data="vm.data3" chart-labels="vm.labels3"
+                                        chart-options="vm.options"></canvas>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <h2>Test Status</h2>
+                                <canvas id="pie" class="chart chart-pie" chart-data="vm.data4" chart-labels="vm.labels4"
+                                        chart-options="vm.options"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
 </section>

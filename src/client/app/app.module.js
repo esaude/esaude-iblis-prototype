@@ -1,20 +1,19 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular.module('app', [
-    'app.core',
-    'app.widgets',
+    angular.module('app', [
+        'app.core',
+        // 'app.widgets',
 
-    //3d party modules
-    'ui.bootstrap',
-    'chart.js',
+        //3d party modules
 
-    //app modules
-    'app.admin',
-    'app.dashboard',
-    'app.layout',
-    'app.patients',
-    'app.tests'
-  ]);
+
+        //app modules
+        'app.admin',
+        // 'app.dashboard',
+        'app.layout',
+        'app.patients',
+        'app.tests'
+    ]);
 
 })();

@@ -1,5 +1,11 @@
 {
-    "excludeFiles": ["node_modules/**", "bower_components/**"],
+    "excludeFiles": [
+      "node_modules/**",
+       "bower_components/**",
+       "src/server/**",
+        "src/client/test-helpers/mock-data.js"],
+
+
 
     "requireCurlyBraces": [
         "if",
@@ -45,6 +51,18 @@
         "|", "^", "&&", "||", "===", "==", ">=",
         "<=", "<", ">", "!=", "!=="
     ],
+
+    "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+    },
+
+    "requireSpacesInFunctionExpression": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+    },
+
+
     "requireSpaceAfterBinaryOperators": true,
     "requireSpacesInConditionalExpression": true,
     "requireSpaceBeforeBlockStatements": true,
@@ -73,4 +91,3 @@
     "requireMultipleVarDecl": null,
     "requireParenthesesAroundIIFE": true
 }
-.

@@ -11,7 +11,7 @@ before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 before_script:
-  - npm install -g bower grunt-cli codacy-coverage coveralls
+  - npm install -g bower gulp-cli codacy-coverage coveralls
   - bower install --force
 after_script:
   - cat coverage/**/lcov.info | codacy-coverage
@@ -20,6 +20,9 @@ before_deploy:
   - gulp build:package
   -
 deploy:
+  - provider: heroku
+    api_key: "Otb09CrX78mWRZbWIuKrtTpJ9/Hq+M1WJvRjli0te/P2LJUazamu2wRlMou0VjRBHOIlZ9U30OLKq3RJUC0TZM9HlACigGIs0k9OltJFI6srpkrJcCiDZ5RD6xHwHm7rO7piYbL73RdYvRoKMpLmBXtmLkdBjcop4IM7c3LOPK0JofCkf/F0BkykT5ff1UXgJEokxHZWZsI5C1eduPGQ1mDiIGd5sl6jKpZi98cYGIzDv0uk8ix9gHvXBJ9VVoj0yG2KEt9tVH59V74HkOjIFg5lA3p/Mxsb1f9WC/Y4YYLaSzIuk+zEKMVBHVaUtleIFowisDCDb0qtPFktK3CfOubOIq77mGbEdRw91+J0wwl4AvjgStylz9eJb9vhyOBPYJ/6nDphCcLR81mJaP+bsu5EDobG4aY38vbIMwWdCj9QUUjqW3D6/9/skotymMSaLCu5YfgRSNYMn7RAAoL5S/P2WhypBD/G4zhx/uSRT1aI2Q5QU1LZzcukmyHMIqyzUM79qBojvzwy+p+y8Y58XOhulhPbzdLaUaZZRRWi5X/CqfBoiBgAYyd2mDnzyES/8/QTmVWUxFfb5/pMIKKdTRh2qsxaJWv1xvQkBIQxKpI4SsLfBblp8jdLf6GG8OVYbNuG5euvdyg7ieolWBW4NRVR7oPRbFinogVrMWQgHFU="
+    app: esaude-iblis 
   - provider: bintray
     file: "bintray.json"
     user: "psbrandt"
@@ -36,4 +39,4 @@ deploy:
       tags: true
 after_deploy:
   -
-  -  
+  -

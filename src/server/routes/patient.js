@@ -33,15 +33,15 @@ var helper = require('../helpers');
 var patientData = 'src/server/data/patient.json';
 
 module.exports = {
-  getPatients:getPatients,
+    getPatients: getPatients,
 
-  getPatient : getPatient ,
-  addPatient: addPatient
-  // savePatient: savePatient(),
-  // deletePatient: deletePatient(),
+    getPatient: getPatient,
+    addPatient: addPatient
+    // savePatient: savePatient(),
+    // deletePatient: deletePatient(),
 };
 function getPatients() {
-  return helper.readData(patientData);
+    return helper.readData(patientData);
 }
 
 function getPatient(id) {
@@ -51,8 +51,7 @@ function getPatient(id) {
 }
 
 function addPatient(newPatient) {
-      var patients = helper.readData(patientData);
-      patients.push(newPatient);
-      helper.savePatientData(patientData, patients);
-
+    var patients = helper.readData(patientData);
+    patients.push(newPatient);
+    helper.savePatientData(patientData, patients);
 }
