@@ -14,7 +14,7 @@
     activate();
 
     function activate() {
-      $translate('ACTIVACTION_ADMIN').then(function (translationValue) {
+      $translate('ACTIVATION_ADMIN').then(function (translationValue) {
         logger.info(translationValue);
       });
     }

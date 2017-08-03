@@ -36,7 +36,7 @@
     function activate() {
       var promises = [getMessageCount(), getPeople()];
       return $q.all(promises).then(function () {
-        $translate('ACTIVACTION_DASH').then(function (translationValue) {
+        $translate('ACTIVATION_DASH').then(function (translationValue) {
           logger.info(translationValue);
         });
 
