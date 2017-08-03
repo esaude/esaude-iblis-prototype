@@ -1,8 +1,8 @@
 /node_modules
 /bower_components
 /report
-/.
+/.tmp
 npm-debug.log
 .DS_Store
 /*.env
-.idea/
+/.idea

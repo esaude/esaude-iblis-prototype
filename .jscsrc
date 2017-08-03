@@ -23,10 +23,9 @@
       "allowComments": true,
       "allowRegex": true
     },
-    "validateIndentation": 4,
+    "validateIndentation": 2,
     "validateQuoteMarks": "'",
 
-    "disallowMultipleLineStrings": true,
     "disallowMixedSpacesAndTabs": true,
     "disallowTrailingWhitespace": true,
     "disallowSpaceAfterPrefixUnaryOperators": true,

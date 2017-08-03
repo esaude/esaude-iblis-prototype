@@ -21,7 +21,7 @@ module.exports = function() {
      */
     // all javascript that we want to vet
     alljs: [
-      './src/**/*.js',
+      './src/**/*.js'
     ],
     build: './build/',
     client: client,
@@ -164,10 +164,7 @@ module.exports = function() {
       coverage: {
         dir: report + 'coverage',
         reporters: [
-          // reporters not supporting the `file` property
-          { type: 'html', subdir: 'report-html' },
-          { type: 'lcov', subdir: 'report-lcov' },
-          { type: 'text-summary' } //, subdir: '.', file: 'text-summary.txt'}
+          { type: 'lcov' }
         ]
       },
       preprocessors: {}

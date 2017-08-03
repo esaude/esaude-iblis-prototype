@@ -1,137 +1,137 @@
 <section class="mainbar">
-    <section class="matter">
-        <div class="container">
-            <div>
-                <button class="btn btn-info btn-info-md"
-                        ng-click="vm.goBack() ">
-                    <i class="fa fa-hand-o-left" translate="GO_BACK"> </i>
-                </button>
-                <button class="btn btn-info btn-form-md" ng-click="vm.cancel()"
-                        ng-disabled="vm.isUnchanged()">
-                    <i class="fa fa-undo" translate="CANCEL"> </i>
-                </button>
-                <button ng-show="vm.patiendNID" class="btn btn-info-form-md" ng-click="vm.addPatient()"
-                        ng-disabled="patientForm.$invalid || vm.isUnchanged()">
-                    <i class="fa fa-save" translate="SAVE"> </i>
-                </button>
-                <button ng-hide="vm.patiendNID" class="btn btn-info-form-md" ng-click="vm.addPatient()"
-                        ng-disabled="patientForm.$invalid || vm.isUnchanged()">
-                    <i class="fa fa-user-plus" translate="CREATE_PATIENT"> </i>
-                </button>
+  <section class="matter">
+    <div class="container">
+      <div>
+        <button class="btn btn-info btn-info-md"
+                ng-click="vm.goBack() ">
+          <i class="fa fa-hand-o-left" translate="GO_BACK"> </i>
+        </button>
+        <button class="btn btn-info btn-form-md" ng-click="vm.cancel()"
+                ng-disabled="vm.isUnchanged()">
+          <i class="fa fa-undo" translate="CANCEL"> </i>
+        </button>
+        <button ng-show="vm.patiendNID" class="btn btn-info-form-md" ng-click="vm.addPatient()"
+                ng-disabled="patientForm.$invalid || vm.isUnchanged()">
+          <i class="fa fa-save" translate="SAVE"> </i>
+        </button>
+        <button ng-hide="vm.patiendNID" class="btn btn-info-form-md" ng-click="vm.addPatient()"
+                ng-disabled="patientForm.$invalid || vm.isUnchanged()">
+          <i class="fa fa-user-plus" translate="CREATE_PATIENT"> </i>
+        </button>
 
-                <!--Need ng-hide for show/hide animations  -->
-  				<span ng-hide="vm.isUnchanged()" class="dissolve-animation ng-hide flag-haschanges">
+        <!--Need ng-hide for show/hide animations  -->
+        <span ng-hide="vm.isUnchanged()" class="dissolve-animation ng-hide flag-haschanges">
   					<i class="fa fa-asterisk fa fa-asterisk-large"
-                       rel="tooltip" title="You have changes">  </i>
+               rel="tooltip" title="You have changes">  </i>
   				</span>
-            </div>  <!-- buttons  -->
+      </div>  <!-- buttons  -->
 
-            <!-- <div class="widget wblue">
-            </div> -->
+      <!-- <div class="widget wblue">
+      </div> -->
 
-            <div class="panel panel-primary">
-                <div class="panel-heading" translate="PATIENT_DETAILS"></div>
+      <div class="panel panel-primary">
+        <div class="panel-heading" translate="PATIENT_DETAILS"></div>
 
-                <div class="panel-body">
-                    <form role="form" name="patientForm" class="form-horizontal"
-                          novalidate>
-                        <!-- <pre> {{ patientForm | json }} </pre> -->
+        <div class="panel-body">
+          <form role="form" name="patientForm" class="form-horizontal"
+                novalidate>
+            <!-- <pre> {{ patientForm | json }} </pre> -->
 
-                        <div title="Editar {{vm.getFullName() || 'Novo Paciente' | translate }}"></div>
-                        <div class="widget-content user"></div>
+            <div title="Editar {{vm.getFullName() || 'Novo Paciente' | translate }}"></div>
+            <div class="widget-content user"></div>
 
-                        <div class="col-sm-6">
-                            <div class="form-group"
-                                 ng-class="{'has-error':patientForm.nid.$touched && patientForm.nid.$invalid}">
-                                <label for="nid" class="control-label" translate="NID"> </label>
-                                <input name="nid" class="form-control" ng-model="vm.patient.nid"
-                                       placeholder="{{'NID' | translate }}" required minlength="8">
-                                <div class="help-block" ng-messages="patientForm.nid.$error">
-                                    <div ng-messages-include="app/core/validation-messages.html"></div>
-                                </div>
-                            </div>
-                            <div class="form-group"
-                                 ng-class="{'has-error':patientForm.firstName.$touched && patientForm.firstName.$invalid}">
-                                <label for="" class="control-label" translate="NAME"> </label>
-                                <div>
-                                    <input class="form-control" ng-model="vm.patient.firstName" name="firstName"
-                                           placeholder="{{'NAME'| translate }}" required minlength="3">
-                                    <div class="help-block" ng-messages="patientForm.firstName.$error">
-                                        <div ng-messages-include="app/core/validation-messages.html"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"
-                                 ng-class="{'has-error':patientForm.lastName.$touched && patientForm.lastName.$invalid}">
-                                <label for="" class="control-label" translate="SURNAME"> </label>
-                                <div>
-                                    <input class="form-control" name="lastName" ng-model="vm.patient.lastName"
-                                           placeholder="{{'SURNAME' | translate}}"
-                                           required minlength="3">
-                                    <div class="help-block" ng-messages="patientForm.lastName.$error">
-                                        <div ng-messages-include="app/core/validation-messages.html"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"
-                                 ng-class="{'has-error':patientForm.age.$touched && patientForm.age.$invalid}">
-                                <label for="" class="control-label" translate="AGE"> </label>
-                                <div>
-                                    <input type="number" class="form-control" name="age" ng-model="vm.patient.age"
-                                           placeholder="{{'AGE' | translate}}"
-                                           required minlength="1">
-                                    <div class="help-block" ng-messages="patientForm.age.$error">
-                                        <div ng-messages-include="app/core/validation-messages.html"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group"
-                                 ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}">
-                                <label for="" class="control-label" translate="ADDRESS"> </label>
-                                <div>
-                                    <input class="form-control" name="location" ng-model="vm.patient.location"
-                                           placeholder="{{'ADDRESS' | translate}}"
-                                           required minlength="3">
-                                    <div class="help-block" ng-messages="patientForm.location.$error">
-                                        <div ng-messages-include="app/core/validation-messages.html"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group"
-                                 ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}">
-                                <label for="" class="control-label" translate="ADDRESS"> </label>
-                                <div>
-                                    <input class="form-control" name="location" ng-model="vm.patient.location"
-                                           placeholder="{{'ADDRESS' | translate}}"
-                                           required minlength="3">
-                                    <div class="help-block" ng-messages="patientForm.location.$error">
-                                        <div ng-messages-include="app/core/validation-messages.html"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group"
-                                 ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}">
-                                <label for="" class="control-label" translate="ADDRESS"> </label>
-                                <div>
-                                    <input class="form-control" name="location" ng-model="vm.patient.location"
-                                           placeholder="{{'ADDRESS' | translate}}"
-                                           required minlength="3">
-                                    <div class="help-block" ng-messages="patientForm.location.$error">
-                                        <div ng-messages-include="app/core/validation-messages.html"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                    </form>
+            <div class="col-sm-6">
+              <div class="form-group"
+                   ng-class="{'has-error':patientForm.nid.$touched && patientForm.nid.$invalid}">
+                <label for="nid" class="control-label" translate="NID"> </label>
+                <input name="nid" class="form-control" ng-model="vm.patient.nid"
+                       placeholder="{{'NID' | translate }}" required minlength="8">
+                <div class="help-block" ng-messages="patientForm.nid.$error">
+                  <div ng-messages-include="app/core/validation-messages.html"></div>
                 </div>
-            </div> <!-- panel body -->
+              </div>
+              <div class="form-group"
+                   ng-class="{'has-error':patientForm.firstName.$touched && patientForm.firstName.$invalid}">
+                <label for="" class="control-label" translate="NAME"> </label>
+                <div>
+                  <input class="form-control" ng-model="vm.patient.firstName" name="firstName"
+                         placeholder="{{'NAME'| translate }}" required minlength="3">
+                  <div class="help-block" ng-messages="patientForm.firstName.$error">
+                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group"
+                   ng-class="{'has-error':patientForm.lastName.$touched && patientForm.lastName.$invalid}">
+                <label for="" class="control-label" translate="SURNAME"> </label>
+                <div>
+                  <input class="form-control" name="lastName" ng-model="vm.patient.lastName"
+                         placeholder="{{'SURNAME' | translate}}"
+                         required minlength="3">
+                  <div class="help-block" ng-messages="patientForm.lastName.$error">
+                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group"
+                   ng-class="{'has-error':patientForm.age.$touched && patientForm.age.$invalid}">
+                <label for="" class="control-label" translate="AGE"> </label>
+                <div>
+                  <input type="number" class="form-control" name="age" ng-model="vm.patient.age"
+                         placeholder="{{'AGE' | translate}}"
+                         required minlength="1">
+                  <div class="help-block" ng-messages="patientForm.age.$error">
+                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                  </div>
+                </div>
+              </div>
 
-            <div class="panel-footer"></div>
-        </div> <!-- panel  -->
-        </div> <!-- container  -->
-    </section>
+              <div class="form-group"
+                   ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}">
+                <label for="" class="control-label" translate="ADDRESS"> </label>
+                <div>
+                  <input class="form-control" name="location" ng-model="vm.patient.location"
+                         placeholder="{{'ADDRESS' | translate}}"
+                         required minlength="3">
+                  <div class="help-block" ng-messages="patientForm.location.$error">
+                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group"
+                   ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}">
+                <label for="" class="control-label" translate="ADDRESS"> </label>
+                <div>
+                  <input class="form-control" name="location" ng-model="vm.patient.location"
+                         placeholder="{{'ADDRESS' | translate}}"
+                         required minlength="3">
+                  <div class="help-block" ng-messages="patientForm.location.$error">
+                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group"
+                   ng-class="{'has-error':patientForm.location.$touched && patientForm.location.$invalid}">
+                <label for="" class="control-label" translate="ADDRESS"> </label>
+                <div>
+                  <input class="form-control" name="location" ng-model="vm.patient.location"
+                         placeholder="{{'ADDRESS' | translate}}"
+                         required minlength="3">
+                  <div class="help-block" ng-messages="patientForm.location.$error">
+                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                  </div>
+                </div>
+              </div>
+
+
+          </form>
+        </div>
+      </div> <!-- panel body -->
+
+      <div class="panel-footer"></div>
+    </div> <!-- panel  -->
+    </div> <!-- container  -->
+  </section>
 </section>

@@ -1,55 +1,55 @@
 <section class="mainbar">
-    <section class="matter">
+  <section class="matter">
 
 
-        <div class="container">
-            <div class="row">
-                <div class="widget wviolet">
-                    <div ht-widget-header title="{{vm.title}}"></div>
-                    <div class="widget-content user">
-                        <h3 translate="Admin_Unauthorized"> Test</h3>
-                    </div>
+    <div class="container">
+      <div class="row">
+        <div class="widget wviolet">
+          <div ht-widget-header title="{{vm.title}}"></div>
+          <div class="widget-content user">
+            <h3 translate="Admin_Unauthorized"> Test</h3>
+          </div>
 
-                    <div class="widget-foot">
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="panel panel-info ">
-                        <div class="panel-heading">
-                            <h3 translate="Admin_Unauthorized"> Test</h3>
-                        </div>
-                        <div class="panel panel-body">
-                            <table class="table-striped table-bordered table-hover table-condesend">
-                                <thead>
-                                <tr>
-                                    <th translate="USER_NAME"></th>
-                                    <th translate="NAME"></th>
-                                    <th translate="EMAIL"></th>
-                                    <th translate="GENDER"></th>
-                                    <th translate="DESIGNATION"></th>
-                                    <th translate="ACTIONS"></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr ng-repeat="user in vm.users">
-                                    <td> {{ user.username }}</td>
-                                    <td> {{ user.name }}</td>
-                                    <td> {{ user.email }}</td>
-                                    <td> {{ user.gender }}</td>
-                                    <td> {{ user.designation }}</td>
-                                    <td> {{ user.actions }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+          <div class="widget-foot">
+            <div class="clearfix"></div>
+          </div>
         </div>
 
-    </section>
+        <div class="col-md-12">
+          <div class="panel panel-info ">
+            <div class="panel-heading">
+              <h3 translate="Admin_Unauthorized"> Test</h3>
+            </div>
+            <div class="panel panel-body">
+              <table class="table-striped table-bordered table-hover table-condesend">
+                <thead>
+                <tr>
+                  <th translate="USER_NAME"></th>
+                  <th translate="NAME"></th>
+                  <th translate="EMAIL"></th>
+                  <th translate="GENDER"></th>
+                  <th translate="DESIGNATION"></th>
+                  <th translate="ACTIONS"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in vm.users">
+                  <td> {{ user.username }}</td>
+                  <td> {{ user.name }}</td>
+                  <td> {{ user.email }}</td>
+                  <td> {{ user.gender }}</td>
+                  <td> {{ user.designation }}</td>
+                  <td> {{ user.actions }}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 </section>

@@ -1,18 +1,16 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('app.tests')
-        .controller('TestController', TestController);
+  angular
+    .module('app.tests')
+    .controller('TestController', TestController);
 
-    TestController.$inject = ['$q', 'dataservice', 'logger', '$translate'];
+  TestController.$inject = ['$q', 'dataservice', 'logger', '$translate'];
 
-    /* @ngInject */
-    function TestController($q, dataservice, logger, $translate) {
-        var vm = this;
-        vm.news = {title: 'Test'};
-
-
-    }
+  /* @ngInject */
+  function TestController($q, dataservice, logger, $translate) {
+    var vm = this;
+    vm.news = {title: 'Test'};
+  }
 
 })();

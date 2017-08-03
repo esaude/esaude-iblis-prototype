@@ -1,9 +1,9 @@
 {
   "name": "iblis",
+  "description": "iBlis Project of eSaude",
   "version": "0.0.1",
-  "description": "iBlis Prototype",
-  "authors": [],
   "license": "MIT",
+  "authors": [],
   "ignore": [
     "**/.*",
     "node_modules",

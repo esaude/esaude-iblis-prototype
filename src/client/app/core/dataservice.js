@@ -1,100 +1,100 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('app.core')
-        .factory('dataservice', dataservice);
+  angular
+    .module('app.core')
+    .factory('dataservice', dataservice);
 
-    dataservice.$inject = ['$http', '$q', 'exception'];
-    /* @ngInject */
-    function dataservice($http, $q, exception) {
-        var service = {
-            //patients
-            getMessageCount: getMessageCount,
-            getPatients: getPatients,
-            getTests: getTests,
+  dataservice.$inject = ['$http', '$q', 'exception', 'logger'];
+  /* @ngInject */
+  function dataservice($http, $q, exception, logger) {
+    var service = {
+      //patients
+      getMessageCount: getMessageCount,
+      getPatients: getPatients,
+      getTests: getTests,
 
-            //patient
-            getPatient: getPatient,
-            addPatient: addPatient,
-            savePatient: savePatient,
-            deletePatient: deletePatient
-        };
+      //patient
+      getPatient: getPatient,
+      addPatient: addPatient,
+      savePatient: savePatient,
+      deletePatient: deletePatient
+    };
 
-        return service;
+    return service;
 
-        function getMessageCount() {
-            console.info('Original getMessageCount called');
-            return $q.when(0);
-        }
+    function getMessageCount() {
+      logger.info('Original getMessageCount called');
+      return $q.when(0);
+    }
 
-        /**
-         *  Patient CRUD
-         */
-        function getPatient(id) {
-            return $http.get('/api/patient/' + id).then(success).catch(fail);
+    /**
+     *  Patient CRUD
+     */
+    function getPatient(id) {
+      return $http.get('/api/patient/' + id).then(success).catch(fail);
 
-            function success(response) {
-                return response.data[0];
-            }
+      function success(response) {
+        return response.data[0];
+      }
 
-            function fail(e) {
-                return exception.catcher('XHR Failed for getPatient')(e);
-            }
-        }
+      function fail(e) {
+        return exception.catcher('XHR Failed for getPatient')(e);
+      }
+    }
 
-        function getPatients() {
-            return $http.get('/api/patients').then(success).catch(fail);
+    function getPatients() {
+      return $http.get('/api/patients').then(success).catch(fail);
 
-            function success(response) {
-                return response.data;
-            }
+      function success(response) {
+        return response.data;
+      }
 
-            function fail(description) {
-                return exception.catcher('XHR Failed for getPatients')(description);
-            }
-        }
+      function fail(description) {
+        return exception.catcher('XHR Failed for getPatients')(description);
+      }
+    }
 
-        function addPatient(patient) {
-            return $http.post('/api/patients/', patient).then(success).catch(fail);
+    function addPatient(patient) {
+      return $http.post('/api/patients/', patient).then(success).catch(fail);
 
-            function success(response) {
-                return response.data;
-            }
+      function success(response) {
+        return response.data;
+      }
 
-            function fail(description) {
-                return exception.catcher('XHR Failed for getPatients')(description);
-            }
-        }
+      function fail(description) {
+        return exception.catcher('XHR Failed for getPatients')(description);
+      }
+    }
 
-        function savePatient() {
-            // return $
-        }
+    function savePatient() {
+      // return $
+    }
 
-        function deletePatient() {
+    function deletePatient() {
 
-            function success(response) {
-                return response.data;
-            }
+      function success(response) {
+        return response.data;
+      }
 
-            function fail(description) {
-                return exception.catcher('XHR Failed for getPatients')(description);
-            }
+      function fail(description) {
+        return exception.catcher('XHR Failed for getPatients')(description);
+      }
 
-        }
+    }
 
-        function getTests() {
-            return $http.get('/api/tests').then(success).catch(fail);
+    function getTests() {
+      return $http.get('/api/tests').then(success).catch(fail);
 
-            function success(response) {
-                return response.data;
-            }
+      function success(response) {
+        return response.data;
+      }
 
-            function fail(e) {
-                return exception.catcher('XHR Failed for getTests')(e);
-            }
-        }
+      function fail(e) {
+        return exception.catcher('XHR Failed for getTests')(e);
+      }
+    }
 
-    }//dataservice
+  }//dataservice
 
 })();
