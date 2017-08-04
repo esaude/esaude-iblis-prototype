@@ -20,12 +20,12 @@
   "SUMMARY_DATE": "Data de Resumo",
   "MESSAGES": "72 Resultados",
   "GREETING": "{{name}} está logado",
-  "NID": "Patient NID",
+  "NID": "NID",
   "NAME": "Nome",
   "SURNAME": "Apelido",
   "GENDER": "Genero",
   "ADDRESS": "Endereco",
-  "Actions": "Acções",
+  "ACTIONS": "Acções",
   "ACTIVATION_DASH": "Pagina Dashboard Activa",
   "ACTIVATION_ADMIN": "Pagina Administracao Activa",
   "ACTIVATION_TESTS": "Pagina de Testes Activa",
@@ -46,5 +46,5 @@
   "PATTERN": "O formato do padrão é inválido ",
   "CREATE_PATIENT": "Criar paciente",
   "404": "Página Não Encontrada",
-  "": "",
+  "": ""
 }

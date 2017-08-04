@@ -25,7 +25,7 @@
   "SURNAME": "Surname",
   "GENDER": "Gender",
   "ADDRESS": "Address",
-  "Actions": "Actions",
+  "ACTIONS": "Actions",
   "ACTIVATION_DASH": "Dashboard View Activated",
   "ACTIVATION_ADMIN": "Admin View Activated",
   "ACTIVATION_TESTS": "Tests View Activated",
@@ -46,5 +46,5 @@
   "PATTERN": "The pattern format is invalid",
   "CREATE_PATIENT": "Create Patient",
   "404": "Page Not Found",
-  "": "",
+  "": ""
 }

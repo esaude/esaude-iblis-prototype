@@ -25,8 +25,8 @@ describe.only('PatientsController', function () {
   });
 
   var i18nUtil = function () {
-    $httpBackend.whenGET('/app/core/i18n/pt.json').respond(200, {});
-    $httpBackend.whenGET('/app/core/i18n/en.json').respond(200, {});
+    $httpBackend.whenGET('i18n/core/pt.json').respond(200, {});
+    $httpBackend.whenGET('i18n/core/en.json').respond(200, {});
   };
 
 

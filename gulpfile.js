@@ -86,6 +86,18 @@ gulp.task('fonts', ['clean-fonts'], function() {
 });
 
 /**
+ * Copy Internationalization
+ * @return {Stream}
+ */
+gulp.task('i18n', ['clean-i18n'], function() {
+  log('Copying i18n');
+
+  return gulp
+    .src(config.i18n)
+    .pipe(gulp.dest(config.build + 'i18n'));
+});
+
+/**
  * Compress images
  * @return {Stream}
  */
@@ -193,7 +205,7 @@ gulp.task('build-specs', ['templatecache'], function(done) {
  * This is separate so we can run tests on
  * optimize before handling image or fonts
  */
-gulp.task('build', ['optimize', 'images', 'fonts'], function() {
+gulp.task('build', ['optimize', 'images', 'fonts', 'i18n'], function() {
   log('Building everything');
 
   var msg = {
@@ -266,6 +278,14 @@ gulp.task('clean', function(done) {
  */
 gulp.task('clean-fonts', function(done) {
   clean(config.build + 'fonts/**/*.*', done);
+});
+
+/**
+ * Remove all internationalization from the build folder
+ * @param  {Function} done - callback when complete
+ */
+gulp.task('clean-i18n', function(done) {
+  clean(config.build + 'i18n/**/*.*', done);
 });
 
 /**

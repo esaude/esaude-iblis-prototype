@@ -12,10 +12,10 @@
     .config(configure)
     .run(function ($rootScope, logger) {
       var translateChangeSuccess = $rootScope.$on('$translateChangeSuccess', function () {
-        logger.info('Translation SUCCESS ');
+        logger.log('Translation SUCCESS ');
       });
       var translateChangeError = $rootScope.$on('$translateChangeError', function () {
-        logger.info('Translation ERROR ');
+        logger.log('Translation ERROR ');
       });
 
       $rootScope.$on('$destroy', translateChangeSuccess);
@@ -23,6 +23,7 @@
     });
 
   toastrConfig.$inject = ['toastr'];
+
   /* @ngInject */
   function toastrConfig(toastr) {
     toastr.options.timeOut = 4000;
@@ -40,15 +41,9 @@
       .preferredLanguage('en')
       .fallbackLanguage('pt')
       .useStaticFilesLoader({
-        prefix: '/app/core/i18n/',
+        prefix: 'i18n/core/',
         suffix: '.json'
       });
-    // $translateProvider.registerAvailableLanguageKeys(['en'], {
-    //     'en-US': 'en',
-    //     ''
-    // });
-    //Use this for browser sentive locale
-    // $translateProvider.determinePreferredLanguage();
 
     //Avoid script injection
     $translateProvider.useSanitizeValueStrategy('sanitize');
