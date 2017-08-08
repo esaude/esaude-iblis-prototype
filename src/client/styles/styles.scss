@@ -1,9 +1,9 @@
-$color_lightblue: #52b9e9;
-$color_blue: #1171a3;
-$color_success: #43c83c;
-$color_warning: #f88529;
-$color_important: #fa3031;
-$color_violet: #932ab6;
+$color-lightblue: #52b9e9;
+$color-blue: #1171a3;
+$color-success: #43c83c;
+$color-warning: #f88529;
+$color-important: #fa3031;
+$color-violet: #932ab6;
 
 * {
   /*-webkit-box-shadow: none !important;
@@ -199,7 +199,7 @@ a.btn {
 /* Button colors */
 
 .btn.btn-primary {
-  background: $color_blue !important;
+  background: $color-blue !important;
 }
 
 .btn.btn-primary:hover {
@@ -207,7 +207,7 @@ a.btn {
 }
 
 .btn.btn-info {
-  background: $color_lightblue !important;
+  background: $color-lightblue !important;
 }
 
 .btn.btn-info:hover {
@@ -215,7 +215,7 @@ a.btn {
 }
 
 .btn.btn-success {
-  background: $color_success !important;
+  background: $color-success !important;
 }
 
 .btn.btn-success:hover {
@@ -223,7 +223,7 @@ a.btn {
 }
 
 .btn.btn-warning {
-  background: $color_warning !important;
+  background: $color-warning !important;
 }
 
 .btn.btn-warning:hover {
@@ -231,7 +231,7 @@ a.btn {
 }
 
 .btn.btn-danger {
-  background: $color_important !important;
+  background: $color-important !important;
 }
 
 .btn.btn-danger:hover {
@@ -242,58 +242,58 @@ a.btn {
 
 .label.label-success,
 .badge.badge-success {
-  background: $color_success !important;
+  background: $color-success !important;
 }
 
 .label.label-warning,
 .badge.badge-warning {
-  background: $color_warning !important;
+  background: $color-warning !important;
 }
 
 .label.label-important,
 .badge.badge-important {
-  background: $color_important !important;
+  background: $color-important !important;
 }
 
 .label.label-info,
 .badge.badge-info {
-  background: $color_lightblue !important;
+  background: $color-lightblue !important;
 }
 
 /* Background colors */
 
 .blightblue {
-  background: $color_lightblue !important;
+  background: $color-lightblue !important;
   color: #fff !important;
   border: 0 !important;
 }
 
 .bblue {
-  background: $color_blue !important;
+  background: $color-blue !important;
   color: #fff !important;
   border: 0 !important;
 }
 
 .bgreen {
-  background: $color_success !important;
+  background: $color-success !important;
   color: #fff !important;
   border: 0 !important;
 }
 
 .borange {
-  background: $color_warning !important;
+  background: $color-warning !important;
   color: #fff !important;
   border: 0 !important;
 }
 
 .bred {
-  background: $color_important !important;
+  background: $color-important !important;
   color: #fff !important;
   border: 0 !important;
 }
 
 .bviolet {
-  background: $color_violet !important;
+  background: $color-violet !important;
   color: #fff !important;
   border: 0 !important;
 }
@@ -328,27 +328,27 @@ a.btn {
 /* Text colors */
 
 .lightblue {
-  color: $color_lightblue !important;
+  color: $color-lightblue !important;
 }
 
 .blue {
-  color: $color_blue !important;
+  color: $color-blue !important;
 }
 
 .green {
-  color: $color_success !important;
+  color: $color-success !important;
 }
 
 .orange {
-  color: $color_warning !important;
+  color: $color-warning !important;
 }
 
 .red {
-  color: $color_important !important;
+  color: $color-important !important;
 }
 
 .violet {
-  color: $color_violet !important;
+  color: $color-violet !important;
 }
 
 /* Modal */
@@ -406,7 +406,7 @@ form label {
   bottom: 0;
   left: 0;
   z-index: 104400;
-  background: $color_important;
+  background: $color-important;
   display: none;
 }
 
@@ -496,7 +496,6 @@ form label {
   -ms-border-radius: 0;
   border-radius: 0;
   border: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
 }
 
 .dropdown-menu li {
@@ -629,8 +628,7 @@ form label {
 .sidebar .navi li ul li a {
   display: block;
   background: none;
-  padding: 10px 0;
-  padding-left: 30px;
+  padding: 10px 0 10px 30px;
   text-decoration: none;
   color: #999;
   border-bottom: 1px solid #222;
@@ -651,7 +649,7 @@ form label {
 .sidebar .navi > li.nlightblue > a:hover,
 .sidebar .navi > li.open.nlightblue > a,
 .sidebar .navi > li.current.nlightblue > a {
-  background: $color_lightblue !important;
+  background: $color-lightblue !important;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
@@ -661,7 +659,7 @@ form label {
 .sidebar .navi > li.nblue > a:hover,
 .sidebar .navi > li.open.nblue > a,
 .sidebar .navi > li.current.nblue > a {
-  background: $color_blue !important;
+  background: $color-blue !important;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
@@ -671,7 +669,7 @@ form label {
 .sidebar .navi > li.ngreen > a:hover,
 .sidebar .navi > li.open.ngreen > a,
 .sidebar .navi > li.current.ngreen > a {
-  background: $color_success !important;
+  background: $color-success !important;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
@@ -681,7 +679,7 @@ form label {
 .sidebar .navi > li.norange > a:hover,
 .sidebar .navi > li.open.norange > a,
 .sidebar .navi > li.current.norange > a {
-  background: $color_warning !important;
+  background: $color-warning !important;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
@@ -691,7 +689,7 @@ form label {
 .sidebar .navi > li.nred > a:hover,
 .sidebar .navi > li.open.nred > a,
 .sidebar .navi > li.current.nred > a {
-  background: $color_important !important;
+  background: $color-important !important;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
@@ -701,7 +699,7 @@ form label {
 .sidebar .navi > li.nviolet > a:hover,
 .sidebar .navi > li.open.nviolet > a,
 .sidebar .navi > li.current.nviolet > a {
-  background: $color_violet !important;
+  background: $color-violet !important;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
@@ -836,7 +834,7 @@ form label {
 /* Matter */
 
 .mainbar .matter {
-  border-top: 0px solid #ddd;
+  border-top: 0 solid #ddd;
   margin: 2em;
 }
 
@@ -924,38 +922,38 @@ form label {
 /* Widget colors */
 
 .widget.wred .widget-head {
-  background-color: $color_important;
-  border: 1px solid $color_important;
+  background-color: $color-important;
+  border: 1px solid $color-important;
   color: #fff;
 }
 
 .widget.wlightblue .widget-head {
-  background-color: $color_lightblue;
-  border: 1px solid $color_lightblue;
+  background-color: $color-lightblue;
+  border: 1px solid $color-lightblue;
   color: #fff;
 }
 
 .widget.wblue .widget-head {
-  background-color: $color_blue;
-  border: 1px solid $color_blue;
+  background-color: $color-blue;
+  border: 1px solid $color-blue;
   color: #fff;
 }
 
 .widget.wgreen .widget-head {
-  background-color: $color_success;
-  border: 1px solid $color_success;
+  background-color: $color-success;
+  border: 1px solid $color-success;
   color: #fff;
 }
 
 .widget.worange .widget-head {
-  background-color: $color_warning;
-  border: 1px solid $color_warning;
+  background-color: $color-warning;
+  border: 1px solid $color-warning;
   color: #fff;
 }
 
 .widget.wviolet .widget-head {
-  background-color: $color_violet;
-  border: 1px solid $color_violet;
+  background-color: $color-violet;
+  border: 1px solid $color-violet;
   color: #fff;
 }
 
@@ -1004,7 +1002,6 @@ form label {
   margin-bottom: 5px;
   margin-right: 10px;
   padding: 1.5em 1em;
-  background-color: #f8f8f8;
   background: #f8f8f8;
   border: 1px solid #ccc;
   max-width: 100%;
@@ -1312,7 +1309,7 @@ body {
 }
 
 .sidebar .navi li ul li a:hover {
-  color: $color_lightblue;
+  color: $color-lightblue;
 }
 
 .sidebar .navi li ul li a:disabled {
@@ -1371,7 +1368,6 @@ input.form-control,
 select.form-control,
 textarea.form-control {
   /*width: 205px;*/
-  display: inline;
   display: block;
   width: 50%;
   max-width: 30em;
@@ -1437,7 +1433,7 @@ small {
 .widget-content .padd:hover {
   cursor: pointer;
   color: white;
-  background-color: $color_lightblue;
+  background-color: $color-lightblue;
 }
 
 .widget-content .padd:hover * {
@@ -1556,7 +1552,6 @@ small {
   font-weight: normal;
   -webkit-text-shadow: 2px 2px #000000;
   text-shadow: 2px 2px #000000;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
   text-transform: uppercase;
   text-decoration: none;
   color: #F58A00;
@@ -1593,8 +1588,8 @@ small {
 }
 
 .ngplus-overlay-background {
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   padding-left: 100px;
   position: absolute;
   z-index: 10000;
@@ -1609,29 +1604,26 @@ small {
   /*border: 1px solid #000;*/
   /*background-color: #fff;*/
   font-weight: bold;
-  height: 100px;
-  width: 300px;
   height: 15em;
   width: 20em;
   z-index: 10000;
   text-align: center;
 }
 
-.page-adjust-huener-message {
+.page-spinner-message {
   text-align: center;
   font-size: 400%;
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   font-weight: normal;
   -webkit-text-shadow: 2px 2px #000000;
   text-shadow: 2px 2px #000000;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
   text-transform: uppercase;
   text-decoration: none;
   color: #F58A00;
   padding: 0;
 }
 
-.page-adjust-huener-message.page-adjust-huener-message-subtle {
+.page-spinner-message.page-adjust-huener-message-subtle {
   margin: 30% auto 0 auto;
   font-size: 200%;
 }
@@ -1640,7 +1632,7 @@ small {
   font-size: 200%;
 }
 
-.adjust-huener {
+.spinner  {
   margin: 20% auto 0 auto;
   left: auto;
   top: auto !important;
