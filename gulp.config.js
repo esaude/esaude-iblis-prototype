@@ -26,7 +26,7 @@ module.exports = function() {
     build: './build/',
     client: client,
     // css: temp + 'styles.css',
-    css: client + '/styles/style-alternate.css',
+    css: temp + '/app.css',
     fonts: bower.directory + 'font-awesome/fonts/**/*.*',
     html: client + '**/*.html',
     htmltemplates: clientApp + '**/*.html',
@@ -44,9 +44,9 @@ module.exports = function() {
       '**/*.module.js',
       '**/*.js'
     ],
-    less: client + 'styles/styles.less',
     report: report,
     root: root,
+    sass: client + 'styles/styles.scss',
     server: server,
     source: 'src/',
     stubsjs: [
