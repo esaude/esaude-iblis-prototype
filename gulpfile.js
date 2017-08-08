@@ -6,6 +6,7 @@ var eslint = require('gulp-eslint');
 var glob = require('glob');
 var gulp = require('gulp');
 var path = require('path');
+var sass = require('gulp-sass');
 var _ = require('lodash');
 var $ = require('gulp-load-plugins')({ lazy: true });
 var protractor = $.protractor.protractor;
@@ -58,16 +59,16 @@ gulp.task('plato', function(done) {
 });
 
 /**
- * Compile less to css
+ * Compile sass to css
  * @return {Stream}
  */
 gulp.task('styles', ['clean-styles'], function() {
-  log('Compiling Less --> CSS');
+  log('Compiling Sass --> CSS');
 
   return gulp
-    .src(config.less)
+    .src(config.sass)
     .pipe($.plumber()) // exit gracefully if something fails after this
-    .pipe($.less())
+    .pipe(sass().on('error', sass.logError))
     //        .on('error', errorLogger) // more verbose and dupe output. requires emit.
     .pipe($.autoprefixer({ browsers: ['last 2 version', '> 5%'] }))
     .pipe(gulp.dest(config.temp));
@@ -86,6 +87,18 @@ gulp.task('fonts', ['clean-fonts'], function() {
 });
 
 /**
+ * Copy Internationalization
+ * @return {Stream}
+ */
+gulp.task('i18n', ['clean-i18n'], function() {
+  log('Copying i18n');
+
+  return gulp
+    .src(config.i18n)
+    .pipe(gulp.dest(config.build + 'i18n'));
+});
+
+/**
  * Compress images
  * @return {Stream}
  */
@@ -98,8 +111,8 @@ gulp.task('images', ['clean-images'], function() {
     .pipe(gulp.dest(config.build + 'images'));
 });
 
-gulp.task('less-watcher', function() {
-  gulp.watch([config.less], ['styles']);
+gulp.task('sass-watcher', function() {
+  gulp.watch([config.sass], ['styles']);
 });
 
 /**
@@ -193,13 +206,12 @@ gulp.task('build-specs', ['templatecache'], function(done) {
  * This is separate so we can run tests on
  * optimize before handling image or fonts
  */
-gulp.task('build', ['optimize', 'images', 'fonts'], function() {
+gulp.task('build', ['optimize', 'images', 'fonts', 'i18n'], function() {
   log('Building everything');
 
   var msg = {
     title: 'gulp build',
-    subtitle: 'Deployed to the build folder',
-    message: 'Running `gulp serve-build`'
+    subtitle: 'Deployed to the build folder'
   };
   del(config.temp);
   log(msg);
@@ -267,6 +279,14 @@ gulp.task('clean', function(done) {
  */
 gulp.task('clean-fonts', function(done) {
   clean(config.build + 'fonts/**/*.*', done);
+});
+
+/**
+ * Remove all internationalization from the build folder
+ * @param  {Function} done - callback when complete
+ */
+gulp.task('clean-i18n', function(done) {
+  clean(config.build + 'i18n/**/*.*', done);
 });
 
 /**
@@ -524,12 +544,12 @@ function startBrowserSync(isDev, specRunner) {
   log('Starting BrowserSync on port ' + port);
 
   // If build: watches the files, builds, and restarts browser-sync.
-  // If dev: watches less, compiles it to css, browser-sync handles reload
+  // If dev: watches sass, compiles it to css, browser-sync handles reload
   if (isDev) {
-    gulp.watch([config.less], ['styles'])
+    gulp.watch([config.sass], ['styles'])
       .on('change', changeEvent);
   } else {
-    gulp.watch([config.less, config.js, config.html], ['browserSyncReload'])
+    gulp.watch([config.sass, config.js, config.html], ['browserSyncReload'])
       .on('change', changeEvent);
   }
 
@@ -538,7 +558,7 @@ function startBrowserSync(isDev, specRunner) {
     port: 3000,
     files: isDev ? [
       config.client + '**/*.*',
-      '!' + config.less,
+      '!' + config.sass,
       config.temp + '**/*.css'
     ] : [],
     watchOptions: {

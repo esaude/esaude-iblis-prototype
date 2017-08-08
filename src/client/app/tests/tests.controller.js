@@ -29,7 +29,7 @@
     function activate() {
       var promises = [getTests()];
       return $q.all(promises).then(function () {
-        $translate('ACTIVACTION_TESTS').then(function (translationValue) {
+        $translate('ACTIVATION_TESTS').then(function (translationValue) {
           logger.info(translationValue);
         });
       });

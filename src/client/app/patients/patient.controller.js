@@ -31,7 +31,7 @@
 
     function activate() {
       return getPatient(vm.patiendNID).then(function () {
-        $translate('ACTIVACTION_DETAILS').then(function (translationValue) {
+        $translate('ACTIVATION_DETAILS').then(function (translationValue) {
           logger.info(translationValue);
         });
       });
