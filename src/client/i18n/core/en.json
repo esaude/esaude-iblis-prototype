@@ -22,6 +22,7 @@
   "GREETING": "{{name}} is logged in",
   "NID": "Patient NID",
   "NAME": "Name",
+  "AGE": "Age",
   "SURNAME": "Surname",
   "GENDER": "Gender",
   "ADDRESS": "Address",
@@ -46,5 +47,15 @@
   "PATTERN": "The pattern format is invalid",
   "CREATE_PATIENT": "Create Patient",
   "404": "Page Not Found",
+  "SEARCH": "Search",
+  "PATIENTS_LIST": "Patients List",
+  "NEW_PATIENT": "New Patient",
+  "EDIT": "Edit",
+  "VIEW": "View",
+  "SAVE": "Save",
+  "CANCEL":"Cancel",
+  "SEARCH_PLACEHOLDER":"Type patient name or patient NID ",
+  "TESTS_LIST":"Tests List",
+  "VISIT_TYPE":"Visit Type",
   "": ""
 }

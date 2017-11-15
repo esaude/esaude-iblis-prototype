@@ -45,8 +45,9 @@
                    ng-class="{'has-error':patientForm.nid.$touched && patientForm.nid.$invalid}">
                 <label for="nid" class="control-label" translate="NID"> </label>
                 <input name="nid" class="form-control" ng-model="vm.patient.nid"
-                       placeholder="{{'NID' | translate }}" required minlength="8">
-                <div class="help-block" ng-messages="patientForm.nid.$error">
+                       placeholder="{{'NID' | translate }}" required minlength="4">
+                <div class="help-block" ng-messages="patientForm.nid.$error"
+                    ng-if="patientForm.nid.$touched">
                   <div ng-messages-include="app/core/validation-messages.html"></div>
                 </div>
               </div>
@@ -56,7 +57,8 @@
                 <div>
                   <input class="form-control" ng-model="vm.patient.firstName" name="firstName"
                          placeholder="{{'NAME'| translate }}" required minlength="3">
-                  <div class="help-block" ng-messages="patientForm.firstName.$error">
+                  <div class="help-block" ng-messages="patientForm.firstName.$error"
+                      ng-if="patientForm.firstName.$touched">
                     <div ng-messages-include="app/core/validation-messages.html"></div>
                   </div>
                 </div>
@@ -66,10 +68,10 @@
                 <label for="" class="control-label" translate="SURNAME"> </label>
                 <div>
                   <input class="form-control" name="lastName" ng-model="vm.patient.lastName"
-                         placeholder="{{'SURNAME' | translate}}"
-                         required minlength="3">
+                         placeholder="{{'SURNAME' | translate}}" required minlength="3">
                   <div class="help-block" ng-messages="patientForm.lastName.$error">
-                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                    <div ng-messages-include="app/core/validation-messages.html"
+                          ng-if="patientForm.lastName.$touched"></div>
                   </div>
                 </div>
               </div>
@@ -78,10 +80,10 @@
                 <label for="" class="control-label" translate="AGE"> </label>
                 <div>
                   <input type="number" class="form-control" name="age" ng-model="vm.patient.age"
-                         placeholder="{{'AGE' | translate}}"
-                         required minlength="1">
+                         placeholder="{{'AGE' | translate}}" required minlength="1">
                   <div class="help-block" ng-messages="patientForm.age.$error">
-                    <div ng-messages-include="app/core/validation-messages.html"></div>
+                    <div ng-messages-include="app/core/validation-messages.html"
+                        ng-if="patientForm.age.$touched"> </div>
                   </div>
                 </div>
               </div>

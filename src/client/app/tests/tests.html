@@ -9,10 +9,10 @@
               <input type="text" class="form-control test-search" class="form-control test-search"
                      type="text"
                      ng-model="vm.searchQuery"
-                     placeholder="Digite o numero de requisicao ou NID do paciente">
+                     placeholder="{{'SEARCH_PLACEHOLDER' | translate }} ">
 
               <a class="btn btn-primary">
-                <i class="fa fa-search-plus"></i> Buscar
+                <i class="fa fa-search-plus"></i><span translate>SEARCH</span>
               </a>
             </form>
           </div>
@@ -22,7 +22,7 @@
         <div class="col-md-12">
           <div class="panel panel-success">
             <div class="panel panel-heading"><i class="fa fa-hospital-o fa-2x "></i>
-              Lista de Testes
+              <span translate>TESTS_LIST</span>
               <button class="btn btn-success pull-right" ng-click="vm.goToNewTest()"><i
                 class="fa fa-flask fa-plus fa-lg"></i> {{ 'NEW_TEST' | translate }}
               </button>
@@ -34,10 +34,10 @@
                   <th translate="Requisition_ID"></th>
                   <th>{{ 'Requisition_ID' | translate}}</th>
                   <th> {{'NID'}}</th>
-                  <th translate="Age"></th>
-                  <th translate="Gender"></th>
-                  <th translate="">Tipo de Visita</th>
-                  <th collspan="4">Testes</th>
+                  <th translate="AGE"></th>
+                  <th translate="GENDER"></th>
+                  <th translate="VISIT_TYPE"></th>
+                  <th collspan="4" translate="TESTS"></th>
                 </tr>
                 </thead>
                 <tbody>

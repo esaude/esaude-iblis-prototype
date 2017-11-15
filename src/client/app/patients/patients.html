@@ -9,11 +9,11 @@
               <div class="form-group">
                 <form action="" class="search">
                   <input name="searchPatient" class="form-control test-search" type="text"
-                         ng-model="vm.searchQuery" placeholder="Digite o nome ou NID do paciente"/>
+                         ng-model="vm.searchQuery" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"/>
 
                   <a class="btn btn-primary">
                     <span class="fa fa-search"></span>
-                    Procurar </a>
+                    <span translate>SEARCH</span> </a>
                 </form>
               </div>
             </div>
@@ -22,10 +22,10 @@
         <!-- container-fluid -->
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <span class="fa fa-user"></span>
-            Lista de Pacientes
+            <span class="fa fa-user"></span><span translate> PATIENTS_LIST</span>
+
             <button class="btn btn-default pull-right" ng-click="vm.newPatient()">
-              <i class="fa fa-user-plus"> </i> Novo Paciente
+              <i class="fa fa-user-plus"> </i> <span translate>NEW_PATIENT</span>
             </button>
           </div>
         </div>
@@ -63,16 +63,16 @@
 
               <td>
                 <button ng-hide="vm.currentEdit[patient.nid]" class="btn btn-success"
-                        ng-click="vm.edit(patient)"><i class="fa fa-pencil"></i> Editar
+                        ng-click="vm.edit(patient)"><i class="fa fa-pencil"></i> <span translate>EDIT</span>
                 </button>
                 <button ng-hide="vm.currentEdit[patient.nid]" class="btn btn-primary"
-                        ng-click="vm.gotoPatient(patient.nid)"><i class="fa fa-eye"></i> Vizualizar
+                        ng-click="vm.gotoPatient(patient.nid)"><i class="fa fa-eye"></i><span translate>VIEW</span>
                 </button>
                 <button ng-show="vm.currentEdit[patient.nid]" class="btn btn-info" ng-click="vm.save()">
-                  Salvar
+                    <span translate>SAVE</span>
                 </button>
                 <button ng-show="vm.currentEdit[patient.nid]" class="btn btn-danger"
-                        ng-click="vm.cancel(patient.nid)"> Cancelar
+                        ng-click="vm.cancel(patient.nid)"> <span translate>CANCEL</span>
                 </button>
               </td>
             </tr>

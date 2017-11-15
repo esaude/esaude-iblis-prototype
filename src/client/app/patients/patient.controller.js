@@ -67,6 +67,7 @@
         logger.success('Paciente modificado com sucesso');
       });
     }
+
   }
 
 })();

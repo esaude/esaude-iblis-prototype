@@ -23,6 +23,7 @@
   "NID": "NID",
   "NAME": "Nome",
   "SURNAME": "Apelido",
+  "AGE": "Idade",
   "GENDER": "Genero",
   "ADDRESS": "Endereco",
   "ACTIONS": "Acções",
@@ -46,5 +47,16 @@
   "PATTERN": "O formato do padrão é inválido ",
   "CREATE_PATIENT": "Criar paciente",
   "404": "Página Não Encontrada",
+  "SEARCH": "Procurar",
+  "PATIENTS_LIST": "Lista de Pacientes",
+  "NEW_PATIENT": "Novo Paciente",
+  "EDIT": "Editar",
+  "VIEW": "Vizualizar",
+  "SAVE": "Salvar",
+  "CANCEL":"Cancelar",
+  "SEARCH_PLACEHOLDER":"Digite o nome ou NID do paciente",
+  "TESTS_LIST":"Lista de Testes",
+  "VISIT_TYPE":"Tipo de Visita",
   "": ""
+
 }
